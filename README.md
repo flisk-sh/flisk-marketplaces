@@ -4,7 +4,7 @@ Listings, Actors and packages that make [Flisk](https://flisk.sh) and related th
 
 | Marketplace | Folder | Contents |
 | --- | --- | --- |
-| [Apify Store](https://apify.com/store) | [`apify/`](apify) | `flisk-app-starter`: pick what to build (shop, SaaS, restaurant, AI agent, login) and get a ready-to-run app ZIP. `flisk-stack-scanner`: list every part of an app in a GitHub repo. |
+| [Apify Store](https://apify.com/store) | [`apify/`](apify) | `flisk-app-starter`: pick what to build (online shop, website with accounts, restaurant app, AI helper) and get a working app. `flisk-stack-scanner`: see every piece of an app in a GitHub link. |
 
 Add a new marketplace as its own top-level folder with its own README covering how to publish there.
 

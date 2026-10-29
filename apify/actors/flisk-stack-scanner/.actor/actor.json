@@ -1,8 +1,8 @@
 {
   "actorSpecification": 1,
   "name": "flisk-stack-scanner",
-  "title": "App Stack Map: List Every Part of Your App (Flisk)",
-  "description": "Paste a GitHub repo and see every part of your app: API, website, workers, AI agents and database, with ports and what depends on what. Flags broken service.json files before your app won't start.",
+  "title": "What Is My App Made Of? Check Any GitHub App (Flisk)",
+  "description": "Paste a GitHub link and see every piece of your app in one table: the website, the parts behind it, and which piece needs which. Finds broken settings files before your app fails to start.",
   "version": "0.1",
   "buildTag": "latest",
   "dockerfile": "./Dockerfile",
@@ -10,7 +10,7 @@
   "storages": {
     "dataset": {
       "actorSpecification": 1,
-      "title": "Flisk services",
+      "title": "Pieces of your app",
       "views": {
         "services": {
           "title": "Services",
@@ -18,13 +18,13 @@
           "display": {
             "component": "table",
             "properties": {
-              "appName": { "label": "Name" },
-              "appType": { "label": "Type" },
-              "stack": { "label": "Stack" },
+              "appName": { "label": "Piece" },
+              "appType": { "label": "Kind" },
+              "stack": { "label": "Group" },
               "port": { "label": "Port" },
-              "dependsOn": { "label": "Depends on" },
-              "issues": { "label": "Issues" },
-              "path": { "label": "Manifest path" }
+              "dependsOn": { "label": "Needs" },
+              "issues": { "label": "Problems found" },
+              "path": { "label": "File" }
             }
           }
         }

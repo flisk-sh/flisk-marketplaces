@@ -6,17 +6,17 @@
     "template": {
       "title": "What do you want to build?",
       "type": "string",
-      "description": "Each option is a real, working app you can start and change.",
+      "description": "Every choice is a real app that works. Start it, then change it.",
       "editor": "select",
       "default": "ecommerce",
       "enum": ["ecommerce", "saas", "restaurant", "agent-stack", "user-management", "example"],
       "enumTitles": [
-        "Online shop (Vue storefront + catalog API)",
-        "SaaS app (dashboard + checkout button)",
-        "Restaurant app (reservations, kitchen, floor)",
-        "AI agent app (agent + tools + database)",
-        "Accounts and login (admin + portal)",
-        "Minimal starter (API + website + worker + database)"
+        "Online shop (shop page + product list)",
+        "Website with accounts and a Buy button",
+        "Restaurant app (table bookings, kitchen screen)",
+        "AI helper app (chat helper that can use tools)",
+        "Sign-up and login for your users",
+        "Tiny starter (a website that saves data)"
       ]
     },
     "projectName": {

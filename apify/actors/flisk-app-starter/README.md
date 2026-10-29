@@ -1,25 +1,25 @@
-# Build an App: Online Shop, SaaS, AI Agent Starters (Flisk)
+# Build an App Fast: Online Shop, Website, Booking, AI Helper (Flisk)
 
-Pick what you want to build. Get a working app project back, ready to start on your own computer with one command.
+Say what you want to build. Get a working app back. Start it on your own computer with one command.
 
-No scaffolding, no wiring, no config files to write. Every starter is a real app from [Flisk](https://flisk.sh): it runs your whole app (website, API, workers, database) behind one local address and reloads a part when you save it.
+No setup, no wiring, no files to write by hand. Every choice is a real app made with [Flisk](https://flisk.sh). Start it, click around, then change it into your own.
 
-## Build this
+## Pick what to build
 
-| Pick | You get |
+| You pick | You get |
 | --- | --- |
-| **Online shop** | A Vue 3 storefront and a catalog API |
-| **SaaS app** | An account dashboard and a working checkout button (local, not a billing deploy) |
-| **Restaurant app** | Reservations, kitchen, menu and floor control |
-| **AI agent app** | An agent, a tool server, a database and messaging |
-| **Accounts and login** | Admin, a user portal and compliance views |
-| **Minimal starter** | The smallest app: API, website, worker, database |
+| **Online shop** | A shop page where people see products, and the product list behind it |
+| **Website with accounts and a Buy button** | A page where people see their account, and a Buy button that works on your computer (no real money) |
+| **Restaurant app** | Table bookings, a menu, a kitchen screen and a floor screen |
+| **AI helper app** | An AI helper, the tools it can use, and a place to save what it learns |
+| **Sign-up and login** | Sign-up and login pages, an admin page and a page for users |
+| **Tiny starter** | The smallest working app: a website that saves data |
 
 ## How it works
 
-1. Choose what to build and name your app.
-2. Run the Actor and download the ZIP from the result.
-3. Unzip it and start it:
+1. Pick what to build and give your app a name.
+2. Press Start, then download the ZIP from the result.
+3. Unzip it and run:
 
 ```bash
 npm install -g @flisk-sh/flisk
@@ -27,28 +27,27 @@ cd my-app
 flisk up          # the online shop uses: flisk up store
 ```
 
-You need Docker, Tilt, Node.js 22.12+ and Bun 1.2+. Run `flisk doctor` and it tells you what is missing.
+You need a few free tools on your computer: Docker, Tilt, Node.js and Bun. Run `flisk doctor` and it tells you what is missing.
 
-## Input
+## What goes in
 
 | Field | Example |
 | --- | --- |
 | `template` | `ecommerce`, `saas`, `restaurant`, `agent-stack`, `user-management`, `example` |
 | `projectName` | `my-shop` |
 
-## Output
+## What comes out
 
 ```json
 {
-  "template": "ecommerce",
-  "title": "Online shop (Vue storefront + catalog API)",
+  "title": "Online shop (shop page + product list)",
   "download": "https://api.apify.com/v2/key-value-stores/.../records/my-shop.zip",
-  "run": ["npm install -g @flisk-sh/flisk", "cd my-shop", "flisk up"]
+  "run": ["npm install -g @flisk-sh/flisk", "cd my-shop", "flisk up store"]
 }
 ```
 
 ## Good to know
 
-- Starters are for building and testing locally. They do not deploy anything; production stays with your own tools.
-- Need a blog or a Next.js starter? Flisk can create a Next.js part with `flisk resource my-site --type frontend --framework next`. Ask for more starters at https://github.com/flisk-sh/flisk-marketplaces.
-- You pay only for Apify platform usage; a run takes a few seconds.
+- These apps run on your computer so you can build and test. They do not put anything on the internet for you.
+- Want a blog or a Next.js starter? Tell us at https://github.com/flisk-sh/flisk-marketplaces. You can already add a Next.js page to any Flisk app with `flisk resource my-site --type frontend --framework next`.
+- You pay only for Apify usage. A run takes a few seconds.

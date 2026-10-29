@@ -1,35 +1,35 @@
 // Mirrors the public starters behind `flisk project <template>` (cli/src/utils/project-templates.ts).
 export const TEMPLATES = {
     ecommerce: {
-        title: 'Online shop (Vue storefront + catalog API)',
+        title: 'Online shop (shop page + product list)',
         repo: 'https://github.com/flisk-sh/flisk-ecommerce-example.git',
-        youGet: 'A Vue 3 storefront and a Hono catalog API.',
+        youGet: 'A shop page where people see products, and the product list behind it.',
         stack: 'store',
     },
     saas: {
-        title: 'SaaS app (dashboard + checkout button)',
+        title: 'Website with accounts and a Buy button',
         repo: 'https://github.com/flisk-sh/flisk-saas-starter.git',
-        youGet: 'An account dashboard and a working checkout button (local, not a billing deploy).',
+        youGet: 'A page where people see their account, and a Buy button that works on your computer (it does not take real money).',
     },
     restaurant: {
-        title: 'Restaurant app (reservations, kitchen, floor)',
+        title: 'Restaurant app (table bookings, kitchen screen)',
         repo: 'https://github.com/flisk-sh/flisk-restaurant-example.git',
-        youGet: 'Reservations, kitchen, menu and floor control.',
+        youGet: 'Table bookings, a menu, a kitchen screen and a floor screen.',
     },
     'agent-stack': {
-        title: 'AI agent app (agent + tools + database)',
+        title: 'AI helper app (chat helper that can use tools)',
         repo: 'https://github.com/flisk-sh/flisk-agent-stack.git',
-        youGet: 'A Bun agent, an MCP tool server, Postgres and NATS messaging.',
+        youGet: 'An AI helper, the tools it can use, and a place to save what it learns.',
     },
     'user-management': {
-        title: 'Accounts and login (admin + portal)',
+        title: 'Sign-up and login for your users',
         repo: 'https://github.com/flisk-sh/flisk-user-management.git',
-        youGet: 'Identity admin, a user portal and compliance stacks (not a hosted IdP).',
+        youGet: 'Sign-up and login pages, an admin page to manage users, and a page for users to manage themselves.',
     },
     example: {
-        title: 'Minimal starter (API + website + worker + database)',
+        title: 'Tiny starter (a website that saves data)',
         repo: 'https://github.com/flisk-sh/flisk-example.git',
-        youGet: 'The smallest Flisk app: two stacks, four services.',
+        youGet: 'The smallest working app: a website, the part behind it, and a place to save data.',
     },
 };
 

@@ -1,30 +1,30 @@
-# App Stack Map: List Every Part of Your App (Flisk)
+# What Is My App Made Of? Check Any GitHub App (Flisk)
 
-Paste a GitHub repo and get a clear table of every part of your app: the API, the website, background workers, AI agents, the database. For each one you see its type, port, stack and what it needs to start first. It also flags broken `service.json` files, so you find the mistake here and not when your app refuses to start.
+Paste a GitHub link. Get one simple table of every piece of the app: the website, the parts working behind it, the port each one uses, and which piece needs which. It also finds broken settings files, so you spot the mistake here and not when your app fails to start.
 
 Made for apps built with [Flisk](https://flisk.sh), which runs your whole app on your computer with one command.
 
-## What you can do with it
+## What it is good for
 
-- **See your app at a glance**: every part, its port and its stack in one table.
-- **Check what needs what**: spot a part that waits on another before you change it.
-- **Catch setup mistakes early**: unknown type, invalid port, bad `dependsOn`, invalid JSON.
-- **Onboard someone fast**: send a table instead of a folder tree.
-- **Take it anywhere**: download as JSON, CSV, Excel or HTML, or call it from the API.
+- **See your whole app at once**: every piece in one table.
+- **Know what needs what**: before you change one piece, see what depends on it.
+- **Catch mistakes early**: wrong kind, bad port number, broken file.
+- **Show a teammate**: send a table, not a pile of folders.
+- **Take it anywhere**: download as JSON, CSV, Excel or HTML.
 
-## Input
+## What goes in
 
-| Field | Required | Example |
+| Field | Needed | Example |
 | --- | --- | --- |
 | `repoUrl` | yes | `https://github.com/flisk-sh/flisk` |
 | `branch` | no | `main` |
 | `subdir` | no | `examples/flisk-example` |
 
-Public GitHub (HTTPS) repos only. No login or API key needed.
+Public GitHub apps only. No login or key needed.
 
-## Output
+## What comes out
 
-One row per part of your app (one per `service.json`):
+One row for every piece (every `service.json` file):
 
 ```json
 {
@@ -38,16 +38,16 @@ One row per part of your app (one per `service.json`):
 }
 ```
 
-`issues` is empty when the file is valid.
+`issues` is empty when the file is fine.
 
 ## Cost
 
-A scan of a repo the size of `flisk-sh/flisk` finishes in a few seconds. You pay only for Apify platform usage.
+Checking an app the size of `flisk-sh/flisk` takes a few seconds. You pay only for Apify usage.
 
 ## Limits
 
-- Reads Flisk `service.json` files only; other formats are ignored.
-- `node_modules`, `.git`, `.flisk` and `.flisk-out` are skipped.
-- Private repositories are not supported.
+- Only reads Flisk `service.json` files.
+- Skips `node_modules`, `.git`, `.flisk` and `.flisk-out`.
+- No private GitHub apps.
 
-Questions, or a file format you want covered? Open an issue at https://github.com/flisk-sh/flisk-marketplaces.
+Questions or ideas? https://github.com/flisk-sh/flisk-marketplaces

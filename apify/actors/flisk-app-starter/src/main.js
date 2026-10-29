@@ -36,7 +36,7 @@ try {
         youGet: t.youGet,
         download: store.getPublicUrl(key),
         run: runCommands(projectName, t.stack),
-        needs: 'Docker, Tilt, Node.js 22.12+ and Bun 1.2+ (run `flisk doctor` to check)',
+        needs: 'Free tools on your computer: Docker, Tilt, Node.js and Bun. Run `flisk doctor` and it tells you what is missing.',
     });
     await Actor.setStatusMessage(`Your "${t.title}" project is ready to download`);
 } finally {

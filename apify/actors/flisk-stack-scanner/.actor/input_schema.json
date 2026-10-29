@@ -4,22 +4,22 @@
   "schemaVersion": 1,
   "properties": {
     "repoUrl": {
-      "title": "Git repository URL",
+      "title": "GitHub link",
       "type": "string",
-      "description": "Public HTTPS Git URL, e.g. https://github.com/flisk-sh/flisk",
+      "description": "Link to a public GitHub app, e.g. https://github.com/flisk-sh/flisk",
       "editor": "textfield",
       "prefill": "https://github.com/flisk-sh/flisk"
     },
     "branch": {
-      "title": "Branch or tag",
+      "title": "Version (optional)",
       "type": "string",
-      "description": "Leave empty for the default branch.",
+      "description": "Leave empty to use the main version.",
       "editor": "textfield"
     },
     "subdir": {
-      "title": "Sub-directory",
+      "title": "Only look in this folder (optional)",
       "type": "string",
-      "description": "Only scan this folder inside the repo.",
+      "description": "Leave empty to check the whole app.",
       "editor": "textfield"
     }
   },
