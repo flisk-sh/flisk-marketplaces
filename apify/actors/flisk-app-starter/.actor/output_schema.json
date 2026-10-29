@@ -1,0 +1,12 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Your new app",
+  "description": "Your app, what you get, the download link and the commands that start it.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=starter"
+    }
+  }
+}

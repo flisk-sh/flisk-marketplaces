@@ -7,6 +7,7 @@
   "buildTag": "latest",
   "dockerfile": "./Dockerfile",
   "input": "./input_schema.json",
+  "output": "./output_schema.json",
   "storages": {
     "dataset": {
       "actorSpecification": 1,
@@ -14,15 +15,34 @@
       "views": {
         "starter": {
           "title": "Your app",
-          "transformation": { "fields": ["title", "youGet", "download", "run", "needs"] },
+          "transformation": {
+            "fields": [
+              "title",
+              "youGet",
+              "download",
+              "run",
+              "needs"
+            ]
+          },
           "display": {
             "component": "table",
             "properties": {
-              "title": { "label": "What you are building" },
-              "youGet": { "label": "What you get" },
-              "download": { "label": "Download (ZIP)", "format": "link" },
-              "run": { "label": "Start it with" },
-              "needs": { "label": "Needs" }
+              "title": {
+                "label": "What you are building"
+              },
+              "youGet": {
+                "label": "What you get"
+              },
+              "download": {
+                "label": "Download (ZIP)",
+                "format": "link"
+              },
+              "run": {
+                "label": "Start it with"
+              },
+              "needs": {
+                "label": "Needs"
+              }
             }
           }
         }

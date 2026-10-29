@@ -5,7 +5,7 @@
 set -euo pipefail
 
 USER_NAME="${1:-$(apify info 2>/dev/null | sed -n 's/^.*Username: *//p' | head -1)}"
-USER_NAME="${USER_NAME:-tractable_cougar}"
+USER_NAME="${USER_NAME:-flisk}"
 WORK="$(mktemp -d)"
 trap 'rm -rf "$WORK"' EXIT
 fail() { echo "FAIL: $*" >&2; exit 1; }

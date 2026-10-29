@@ -1,0 +1,12 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "Pieces of your app",
+  "description": "One row for every piece of the app, with its kind, port, what it needs and any problems found.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Results",
+      "template": "{{links.apiDefaultDatasetUrl}}/items?view=services"
+    }
+  }
+}

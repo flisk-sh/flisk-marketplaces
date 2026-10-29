@@ -8,7 +8,8 @@
       "type": "string",
       "description": "Link to a public GitHub app, e.g. https://github.com/flisk-sh/flisk",
       "editor": "textfield",
-      "prefill": "https://github.com/flisk-sh/flisk"
+      "prefill": "https://github.com/flisk-sh/flisk-example",
+      "default": "https://github.com/flisk-sh/flisk-example"
     },
     "branch": {
       "title": "Version (optional)",
@@ -23,5 +24,7 @@
       "editor": "textfield"
     }
   },
-  "required": ["repoUrl"]
+  "required": [
+    "repoUrl"
+  ]
 }

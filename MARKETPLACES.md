@@ -4,7 +4,7 @@ Checked 2026-10-29. "Verified" means I called the marketplace or read the file; 
 
 | # | Marketplace | What goes there | Status | Next step |
 | --- | --- | --- | --- | --- |
-| 1 | [Apify Store](https://apify.com/store) | 2 Actors (`flisk-app-starter`, `flisk-stack-scanner`) | **Pushed and tested, still private** (verified: `e2e/apify.sh` passes against the live Actors) | In Console → Publication: fill SEO fields, set **Public** |
+| 1 | [Apify Store](https://apify.com/store) | 2 Actors: [`flisk/flisk-app-starter`](https://apify.com/flisk/flisk-app-starter), [`flisk/flisk-stack-scanner`](https://apify.com/flisk/flisk-stack-scanner) | **Published** 2026-10-29 (public pages verified), icons and SEO fields set; `e2e/apify.sh` passes | Check Store search for "flisk" in a day |
 | 2 | [Official MCP Registry](https://registry.modelcontextprotocol.io) | `flisk mcp` server | **Listed** as `io.github.flisk-sh/flisk` (verified via the registry API) | none |
 | 3 | [PulseMCP](https://www.pulsemcp.com) | same server | Should follow #2 automatically (from search, not verified) | Search "flisk" there in a week; if missing, use its Submit button |
 | 4 | [Glama](https://glama.ai/mcp/servers) | same server | **Not listed**: `glama.ai/mcp/servers/flisk-sh/flisk` returns 404 (verified). The org's `helpdock` is listed | Sign in with GitHub, add `flisk-sh/flisk`, claim it |
