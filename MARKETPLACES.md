@@ -6,7 +6,7 @@ Checked 2026-10-29. "Verified" means I called the marketplace or read the file; 
 | --- | --- | --- | --- | --- |
 | 1 | [Apify Store](https://apify.com/store) | 2 Actors: [`flisk/flisk-app-starter`](https://apify.com/flisk/flisk-app-starter), [`flisk/flisk-stack-scanner`](https://apify.com/flisk/flisk-stack-scanner) | **Published** 2026-10-29 (public pages verified), icons and SEO fields set; `e2e/apify.sh` passes | Check Store search for "flisk" in a day |
 | 2 | [Official MCP Registry](https://registry.modelcontextprotocol.io) | `flisk mcp` server | **Listed** as `io.github.flisk-sh/flisk` (verified via the registry API) | none |
-| 3 | [PulseMCP](https://www.pulsemcp.com) | same server | Should follow #2 automatically (from search, not verified) | Search "flisk" there in a week; if missing, use its Submit button |
+| 3 | [PulseMCP](https://www.pulsemcp.com) | same server | Submissions **paused** as of 2026-10-07 (from search); it should still ingest the official registry | Re-check later; do not rely on it |
 | 4 | [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk) | same server, listed as "Flisk App Builder" | **Approved and listed** (verified, page loads) | Claim it in the server's admin settings, then paste `glama/Dockerfile` there so the quality checks run (tested: builds, answers the MCP handshake with 21 tools) |
 | 5 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | one list line | **PR open**: [#18048](https://github.com/punkpeye/awesome-mcp-servers/pull/18048) | Wait for review |
 | 6 | [Smithery](https://smithery.ai) | same server | Not found by search (not verified, page is script-rendered) | Sign in, `smithery.ai/new`, point at the repo |
@@ -43,3 +43,14 @@ Checked 2026-10-30 (rules read, not just titles).
 | [appcypher/awesome-mcp-servers](https://github.com/appcypher/awesome-mcp-servers) | Skipped: last updated May 2026 |
 | [awesome-devops-mcp-servers](https://github.com/rohitg00/awesome-devops-mcp-servers) | Skipped: requires a DevOps focus; Flisk is an app builder |
 | [awesome-claude-code](https://github.com/hesreallyhim/awesome-claude-code) | Later: one resource at a time through its own process; best fit is the `flisk-skills` plugin |
+
+Checked 2026-10-30, second round.
+
+| List or directory | Decision |
+| --- | --- |
+| [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools) | **PR open**: [#1144](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1144), MCP Servers and Directories. Disclosed as our own project |
+| [VoltAgent/awesome-agent-skills](https://github.com/VoltAgent/awesome-agent-skills) | Skipped: needs real community usage; `flisk-skills` was created 2026-09-29 and has 2 stars |
+| [heilcheng/awesome-agent-skills](https://github.com/heilcheng/awesome-agent-skills) | Skipped: needs 20+ stars on a `SKILL.md` repo. Revisit when `flisk-skills` has them |
+| [awesome-docker](https://github.com/veggiemonk/awesome-docker) | Skipped: fails its "for Docker" test (Flisk would still exist without Docker) |
+| [mcp.so](https://mcp.so/submit) | Form only (its repo takes no PRs): needs a login. See #7 above |
+| [Claude connector directory](https://claude.ai/directory/manage) | Skipped: remote (https) servers only; `flisk mcp` is local stdio |
