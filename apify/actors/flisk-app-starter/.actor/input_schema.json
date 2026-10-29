@@ -1,0 +1,31 @@
+{
+  "title": "Build an app with Flisk",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "template": {
+      "title": "What do you want to build?",
+      "type": "string",
+      "description": "Each option is a real, working app you can start and change.",
+      "editor": "select",
+      "default": "ecommerce",
+      "enum": ["ecommerce", "saas", "restaurant", "agent-stack", "user-management", "example"],
+      "enumTitles": [
+        "Online shop (Vue storefront + catalog API)",
+        "SaaS app (dashboard + checkout button)",
+        "Restaurant app (reservations, kitchen, floor)",
+        "AI agent app (agent + tools + database)",
+        "Accounts and login (admin + portal)",
+        "Minimal starter (API + website + worker + database)"
+      ]
+    },
+    "projectName": {
+      "title": "Name your app",
+      "type": "string",
+      "description": "Lowercase letters, digits and dashes. Becomes the folder name.",
+      "editor": "textfield",
+      "default": "my-app",
+      "prefill": "my-shop"
+    }
+  }
+}

@@ -4,7 +4,7 @@ Listings, Actors and packages that make [Flisk](https://flisk.sh) and related th
 
 | Marketplace | Folder | Contents |
 | --- | --- | --- |
-| [Apify Store](https://apify.com/store) | [`apify/`](apify) | `flisk-stack-scanner` Actor: scans a public Git repo for Flisk `service.json` manifests and validates them. |
+| [Apify Store](https://apify.com/store) | [`apify/`](apify) | `flisk-app-starter`: pick what to build (shop, SaaS, restaurant, AI agent, login) and get a ready-to-run app ZIP. `flisk-stack-scanner`: list every part of an app in a GitHub repo. |
 
 Add a new marketplace as its own top-level folder with its own README covering how to publish there.
 
@@ -13,7 +13,7 @@ Add a new marketplace as its own top-level folder with its own README covering h
 ```bash
 npm i -g apify-cli
 apify login
-cd apify/actors/flisk-stack-scanner
+cd apify/actors/flisk-app-starter   # or flisk-stack-scanner
 apify push
 ```
 

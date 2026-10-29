@@ -1,8 +1,8 @@
 {
   "actorSpecification": 1,
   "name": "flisk-stack-scanner",
-  "title": "Flisk Stack Scanner",
-  "description": "Scan a public Git repository for Flisk service.json manifests and validate them. Lists every service, its type, stack, port and dependencies.",
+  "title": "App Stack Map: List Every Part of Your App (Flisk)",
+  "description": "Paste a GitHub repo and see every part of your app: API, website, workers, AI agents and database, with ports and what depends on what. Flags broken service.json files before your app won't start.",
   "version": "0.1",
   "buildTag": "latest",
   "dockerfile": "./Dockerfile",

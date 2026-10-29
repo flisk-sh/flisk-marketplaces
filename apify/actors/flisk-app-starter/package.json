@@ -1,0 +1,13 @@
+{
+  "name": "flisk-app-starter",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Apify Actor that hands you a ready-to-run Flisk app starter.",
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "dependencies": {
+    "apify": "^3.2.0"
+  }
+}
