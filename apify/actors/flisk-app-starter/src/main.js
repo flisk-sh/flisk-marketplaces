@@ -15,30 +15,34 @@ try {
         throw new Error('projectName must be lowercase letters, digits and dashes (max 49 chars)');
     }
 
-    const work = mkdtempSync(join(tmpdir(), 'flisk-starter-'));
-    const dir = join(work, projectName);
-    execFileSync('git', ['clone', '--depth', '1', '--', t.repo, dir], {
-        stdio: 'inherit',
-        env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
-    });
-    rmSync(join(dir, '.git'), { recursive: true, force: true });
+    let download = null;
+    if (t.repo) {
+        const work = mkdtempSync(join(tmpdir(), 'flisk-starter-'));
+        const dir = join(work, projectName);
+        execFileSync('git', ['clone', '--depth', '1', '--', t.repo, dir], {
+            stdio: 'inherit',
+            env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
+        });
+        rmSync(join(dir, '.git'), { recursive: true, force: true });
 
-    const zipPath = join(work, `${projectName}.zip`);
-    execFileSync('zip', ['-qr', zipPath, projectName], { cwd: work, stdio: 'inherit' });
+        const zipPath = join(work, `${projectName}.zip`);
+        execFileSync('zip', ['-qr', zipPath, projectName], { cwd: work, stdio: 'inherit' });
 
-    const key = `${projectName}.zip`;
-    const store = await Actor.openKeyValueStore();
-    await store.setValue(key, await readFile(zipPath), { contentType: 'application/zip' });
+        const key = `${projectName}.zip`;
+        const store = await Actor.openKeyValueStore();
+        await store.setValue(key, await readFile(zipPath), { contentType: 'application/zip' });
+        download = store.getPublicUrl(key);
+    }
 
     await Actor.pushData({
         template,
         title: t.title,
         youGet: t.youGet,
-        download: store.getPublicUrl(key),
-        run: runCommands(projectName, t.stack),
+        download,
+        run: runCommands(projectName, t.stack, t.framework),
         needs: 'Free tools on your computer: Docker, Tilt, Node.js and Bun. Run `flisk doctor` and it tells you what is missing.',
     });
-    await Actor.setStatusMessage(`Your "${t.title}" project is ready to download`);
+    await Actor.setStatusMessage(download ? `Your "${t.title}" project is ready to download` : `Your "${t.title}" steps are ready`);
 } finally {
     await Actor.exit();
 }

@@ -33,7 +33,29 @@ export const TEMPLATES = {
     },
 };
 
-export function runCommands(dir, stack) {
+// Starters with no repo are made on the user's computer by Flisk itself (verified with `flisk resource --framework`).
+for (const [id, framework, title] of [
+    ['nextjs', 'next', 'Next.js website'],
+    ['vue', 'vue', 'Vue website'],
+]) {
+    TEMPLATES[id] = {
+        title,
+        youGet: `A ${title} that reloads when you save a file. Flisk creates it on your computer.`,
+        framework,
+        stack: 'web',
+    };
+}
+
+export function runCommands(dir, stack, framework) {
+    if (framework) {
+        return [
+            'npm install -g @flisk-sh/flisk',
+            `mkdir ${dir} && cd ${dir}`,
+            'flisk project --yes',
+            `flisk resource my-site --type frontend --framework ${framework} --stack ${stack} --yes`,
+            `flisk up ${stack}`,
+        ];
+    }
     return [
         'npm install -g @flisk-sh/flisk',
         `cd ${dir}`,

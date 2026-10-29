@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "flisk-app-starter",
-  "title": "Build an App Fast: Online Shop, Website, Booking, AI Helper (Flisk)",
+  "title": "Build an App Fast: Shop, Website, Booking, AI Helper (Flisk)",
   "description": "Say what you want to build. Get a working app back: an online shop, a website with login, a restaurant booking app or an AI helper. Starts on your computer with one command.",
   "version": "0.1",
   "buildTag": "latest",

@@ -1,4 +1,4 @@
-# Build an App Fast: Online Shop, Website, Booking, AI Helper (Flisk)
+# Build an App Fast: Shop, Website, Booking, AI Helper (Flisk)
 
 Say what you want to build. Get a working app back. Start it on your own computer with one command.
 
@@ -14,6 +14,8 @@ No setup, no wiring, no files to write by hand. Every choice is a real app made 
 | **AI helper app** | An AI helper, the tools it can use, and a place to save what it learns |
 | **Sign-up and login** | Sign-up and login pages, an admin page and a page for users |
 | **Tiny starter** | The smallest working app: a website that saves data |
+| **Next.js website** | A real Next.js site that reloads when you save a file (no ZIP: you get the 5 commands that make it on your computer) |
+| **Vue website** | The same, with Vue |
 
 ## How it works
 
@@ -33,7 +35,7 @@ You need a few free tools on your computer: Docker, Tilt, Node.js and Bun. Run `
 
 | Field | Example |
 | --- | --- |
-| `template` | `ecommerce`, `saas`, `restaurant`, `agent-stack`, `user-management`, `example` |
+| `template` | `ecommerce`, `saas`, `restaurant`, `agent-stack`, `user-management`, `example`, `nextjs`, `vue` |
 | `projectName` | `my-shop` |
 
 ## What comes out
@@ -49,5 +51,5 @@ You need a few free tools on your computer: Docker, Tilt, Node.js and Bun. Run `
 ## Good to know
 
 - These apps run on your computer so you can build and test. They do not put anything on the internet for you.
-- Want a blog or a Next.js starter? Tell us at https://github.com/flisk-sh/flisk-marketplaces. You can already add a Next.js page to any Flisk app with `flisk resource my-site --type frontend --framework next`.
+- Want a blog starter? Tell us at https://github.com/flisk-sh/flisk-marketplaces.
 - You pay only for Apify usage. A run takes a few seconds.
