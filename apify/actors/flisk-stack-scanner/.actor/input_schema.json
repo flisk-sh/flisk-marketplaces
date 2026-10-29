@@ -1,0 +1,27 @@
+{
+  "title": "Flisk Stack Scanner input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "repoUrl": {
+      "title": "Git repository URL",
+      "type": "string",
+      "description": "Public HTTPS Git URL, e.g. https://github.com/flisk-sh/flisk",
+      "editor": "textfield",
+      "prefill": "https://github.com/flisk-sh/flisk"
+    },
+    "branch": {
+      "title": "Branch or tag",
+      "type": "string",
+      "description": "Leave empty for the default branch.",
+      "editor": "textfield"
+    },
+    "subdir": {
+      "title": "Sub-directory",
+      "type": "string",
+      "description": "Only scan this folder inside the repo.",
+      "editor": "textfield"
+    }
+  },
+  "required": ["repoUrl"]
+}

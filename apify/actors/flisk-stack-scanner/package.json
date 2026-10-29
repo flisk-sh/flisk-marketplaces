@@ -1,0 +1,14 @@
+{
+  "name": "flisk-stack-scanner",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Apify Actor that scans a Git repo for Flisk service.json manifests.",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "apify": "^3.2.0"
+  }
+}

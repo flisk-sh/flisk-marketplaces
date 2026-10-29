@@ -1,0 +1,34 @@
+{
+  "actorSpecification": 1,
+  "name": "flisk-stack-scanner",
+  "title": "Flisk Stack Scanner",
+  "description": "Scan a public Git repository for Flisk service.json manifests and validate them. Lists every service, its type, stack, port and dependencies.",
+  "version": "0.1",
+  "buildTag": "latest",
+  "dockerfile": "./Dockerfile",
+  "input": "./input_schema.json",
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Flisk services",
+      "views": {
+        "services": {
+          "title": "Services",
+          "transformation": { "fields": ["appName", "appType", "stack", "port", "dependsOn", "issues", "path"] },
+          "display": {
+            "component": "table",
+            "properties": {
+              "appName": { "label": "Name" },
+              "appType": { "label": "Type" },
+              "stack": { "label": "Stack" },
+              "port": { "label": "Port" },
+              "dependsOn": { "label": "Depends on" },
+              "issues": { "label": "Issues" },
+              "path": { "label": "Manifest path" }
+            }
+          }
+        }
+      }
+    }
+  }
+}
