@@ -13,7 +13,7 @@ Status on **2026-10-30**. Details, rules read and next steps are in [MARKETPLACE
 | [Apify Store: App Starter](https://apify.com/flisk/flisk-app-starter) | **Live.** Pick what to build, get a working app. Not yet in Store search results (index lag) |
 | [Apify Store: App Checker](https://apify.com/flisk/flisk-stack-scanner) | **Live.** Not yet in Store search results |
 | [Official MCP Registry](https://registry.modelcontextprotocol.io/?q=flisk) | **Live** as `io.github.flisk-sh/flisk` |
-| [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk) | **Live** as "Flisk App Builder". Still to do: claim it and add the [Dockerfile](glama/Dockerfile) so its quality checks run |
+| [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk) | **Live** as "Flisk App Builder", claimed, with a Glama release (2026-10-30, discovery score 58%). `glama.json` is in the flisk repo root. Quality rating still being evaluated |
 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers/pull/18048) | PR open, waiting for review |
 | [awesome-vibe-coding](https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/226) | PR open, waiting for review |
 | [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1144) | PR open, waiting for review |
@@ -70,7 +70,7 @@ Console fields like the name, description, icon and SEO text are set in Apify Co
 apify/actors/flisk-app-starter/    pick what to build, get a working app
 apify/actors/flisk-stack-scanner/  see every piece of an app in a GitHub link
 apify/assets/                      the Flisk bolt icon
-glama/Dockerfile                   for Glama's automated checks
+glama/Dockerfile                   the same setup as Glama's build form (build step and CMD), for local testing
 e2e/apify.sh                       end-to-end check of the live Actors
 docs/evidence/                     screenshots
 MARKETPLACES.md                    every marketplace, its rules and next step
