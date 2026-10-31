@@ -13,4 +13,5 @@ Copy, URLs, taglines and logos are in `toolradar/README.md`. Read it first and k
 4. Fill what the form asks from `toolradar/README.md`: name, URL, tagline, description, category, pricing (free), logo. Do not invent fields: read the real form with `get_page_text` first and note any new fields in the README.
 5. Claims check the company email domain and role: if it asks for proof, stop and ask the user.
 6. Anything that sends a request for review, accepts terms, or involves payment: ask first. Toolradar offers paid growth and advertising: never buy; the free editorial listing is the goal.
-7. Reviews take about 24 to 48 hours. Record the submission date and status in `toolradar/README.md`, and in the table of `flisk-distribute`.
+7. **At most 2 submissions per hour**; do them two at a time and wait. A personal email triggers a domain confirmation: tell the user to reply from a company address or claim the profile.
+8. Reviews take about 24 to 48 hours. Record the submission date and status in `toolradar/README.md`, and in the table of `flisk-distribute`.
