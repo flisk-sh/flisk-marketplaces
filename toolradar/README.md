@@ -11,10 +11,10 @@
 | Product | State |
 | --- | --- |
 | Flisk CLI (flisk.sh), Flisk demos (demo.flisk.sh) | Live, submitted 2026-10-25 |
-| Pages (pages.flisk.si) | Submitted 2026-10-31, waiting for the domain confirmation email |
-| Citable (citable.flisk.si) | Submitted 2026-10-31, same. Another, unrelated "Citable" is already on Toolradar: not ours |
-| README Score (readme.flisk.si) | **Not yet**: the 2-tools-per-hour limit was hit; retry after an hour |
-| Build Me an App (mcp.flisk.sh) | **Not yet**, same limit |
+| Pages (pages.flisk.si) | Submitted 2026-10-31, being checked (confirm the domain by email or the claim) |
+| Citable (citable.flisk.si) | Submitted 2026-10-31, being checked (confirm the domain by email or the claim). Another, unrelated "Citable" is already on Toolradar: not ours |
+| README Score (readme.flisk.si) | Submitted 2026-10-31, being checked |
+| Build Me an App (mcp.flisk.sh) | Submitted 2026-10-31, being checked. Auto-fill named it "Flisk": corrected to "Build Me an App" before submitting, so it does not duplicate the Flisk CLI listing |
 
 ## How the form works (read from the real form)
 
@@ -47,3 +47,10 @@ claude mcp add --scope user --transport http toolradar https://toolradar.com/api
 ```
 
 Then "update my Toolradar listing" runs `update_my_listing`: it reads the pricing page, shows what differs, and edits after the user agrees. It can edit only the live listings (Flisk CLI, Flisk demos as of 2026-10-31). It refuses marketing claims, rankings, scores and reviews. Set up on this Mac on 2026-10-31; a key pasted in chat once should be rotated.
+
+## Auto-fill checks
+
+Auto-fill is a starting point, not the final text. Before submitting, check each field against the product:
+- The **name** must be the product's name, not the company's (it can read "Flisk" for the app builder).
+- **Best for** must describe a real audience (it once read "Ops teams that outgrew spreadsheets" for a README tool).
+- Empty **tagline** and **description** fields are not filled by Auto-fill for every site: fill them.
