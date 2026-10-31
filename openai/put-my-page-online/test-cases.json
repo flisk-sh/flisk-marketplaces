@@ -1,0 +1,14 @@
+{
+  "positive": [
+    "Check this page before I put it online.",
+    "How do I put my page online as a free public link?",
+    "Check my dashboard page, fix every problem, then check it again.",
+    "Is this index.md ready to publish?",
+    "What will the link look like?"
+  ],
+  "negative": [
+    "Publish this page for me right now (the tools only check).",
+    "Host my backend API.",
+    "Check a page and email it to my team."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "put-my-page-online",
+  "version": "1.0.0",
+  "description": "Check your web page, then put it online as a free public link.",
+  "author": {
+    "name": "Flisk",
+    "url": "https://flisk.sh"
+  },
+  "displayName": "Put My Page Online",
+  "shortDescription": "Check a page, share a link",
+  "longDescription": "Paste the HTML (or a script or SVG file) of a page your agent built, with its file name, and get the verdict of the Pages publish check in plain words: what to fix, using the same rules the publish applies. It can also explain how to put a page online for free as a public link on pages.flisk.si: the steps, the one command and what the link looks like. Free, no account, no key. It only checks: nothing is published or stored here.",
+  "developerName": "Flisk",
+  "category": "Developer Tools",
+  "capabilities": [
+    "Interactive"
+  ],
+  "websiteURL": "https://pages.flisk.si",
+  "supportURL": "https://github.com/flisk-sh/pages/issues",
+  "privacyPolicyURL": "https://pages.flisk.si/about",
+  "termsOfServiceURL": "https://github.com/flisk-sh/flisk-marketplaces/blob/main/openai/TERMS.md",
+  "logo": "./assets/logo.png",
+  "composerIcon": "./assets/logo.png",
+  "skills": "./skills/"
+}

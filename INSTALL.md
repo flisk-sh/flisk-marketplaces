@@ -61,6 +61,10 @@ Or edit `~/.gemini/settings.json`:
 url = "https://mcp.flisk.sh/mcp"
 ```
 
+## ChatGPT
+
+Settings → Apps / Connectors → turn on developer mode → add a custom connector with the URL (names and menus change; check OpenAI's current docs). Once listed, find the plugin in the ChatGPT directory.
+
 ## Check it works
 
 ```bash
