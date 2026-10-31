@@ -6,7 +6,7 @@ Flisk builds and runs a whole app on your computer with one command. These listi
 
 ## Are we everywhere? Not yet.
 
-Status on **2026-10-30**. Details, rules read and next steps are in [MARKETPLACES.md](MARKETPLACES.md).
+Status on **2026-10-31**. Details, rules read and next steps are in [MARKETPLACES.md](MARKETPLACES.md).
 
 | Where | State |
 | --- | --- |
@@ -24,6 +24,45 @@ Status on **2026-10-30**. Details, rules read and next steps are in [MARKETPLACE
 | mcp.so, Cursor Directory, Smithery | Not done: need a login |
 | PulseMCP | Submissions paused (as of 2026-10-07) |
 | Agent-skills lists (VoltAgent, heilcheng) | Not eligible yet: new repo, 2 stars |
+
+## The apps and their MCP tools
+
+All are remote, read-only and keyless (no account, nothing stored). How to add each one to Claude, Claude Code, Gemini CLI, Cursor, Codex and ChatGPT: [INSTALL.md](INSTALL.md).
+
+| App | MCP server | Tools | Site | Repo |
+| --- | --- | --- | --- | --- |
+| Build Me an App | `https://mcp.flisk.sh/mcp` | `plan_app`, `list_app_starters` | [flisk.sh](https://flisk.sh) | [flisk-sh/flisk](https://github.com/flisk-sh/flisk) (`workers/app-builder-mcp`) |
+| Put My Page Online | `https://pages.flisk.si/mcp` | `check_page`, `how_to_put_page_online` | [pages.flisk.si](https://pages.flisk.si) | [flisk-sh/pages](https://github.com/flisk-sh/pages) |
+| Get My Site Found by AI (Citable) | `https://citable.flisk.si/mcp` | `check_site` | [citable.flisk.si](https://citable.flisk.si) | [flisk-sh/citable](https://github.com/flisk-sh/citable) |
+| Improve My README (README Score) | `https://readme.flisk.si/mcp` | `score_readme` | [readme.flisk.si](https://readme.flisk.si) | [flisk-sh/readme-score](https://github.com/flisk-sh/readme-score) |
+| Flisk docs (Helpdock, a docs help center, not an app builder) | `https://helpdock.flisk.sh/mcp` | `search_docs`, `ask_help_center` | [helpdock.flisk.sh](https://helpdock.flisk.sh) | |
+
+## Where each channel is documented
+
+| Channel | Folder | Skill |
+| --- | --- | --- |
+| Claude directory (connectors and plugins) | [claude-directory/](claude-directory/README.md) | `flisk-list-claude-connector`, `flisk-list-claude-plugin` |
+| Apify Store, MCP Registry, Glama, awesome lists | [MARKETPLACES.md](MARKETPLACES.md), [apify/](apify), [glama/](glama) | `flisk-list-marketplaces` |
+| OpenAI (ChatGPT, Codex), parked | [openai/](openai) | `flisk-list-openai-plugin` |
+| Toolradar | [toolradar/](toolradar/README.md) | `flisk-list-toolradar` |
+| GitHub Actions Marketplace | (in the app repos) | `flisk-list-github-action` |
+| How a user adds a server | [INSTALL.md](INSTALL.md) | `flisk-install-mcp` |
+| Overview and the table of what is listed | | `flisk-distribute` |
+
+## Skills
+
+In [`skills/`](skills). Copy a folder to `~/.claude/skills/` to use it in Claude Code.
+
+| Skill | Use it to |
+| --- | --- |
+| [`flisk-distribute`](skills/flisk-distribute/SKILL.md) | See what is listed where, and the conventions (names, hosts, who ticks what) |
+| [`flisk-install-mcp`](skills/flisk-install-mcp/SKILL.md) | Give a user the exact steps to add a server to their client |
+| [`flisk-list-claude-connector`](skills/flisk-list-claude-connector/SKILL.md) | Submit or edit a connector in the Claude directory |
+| [`flisk-list-claude-plugin`](skills/flisk-list-claude-plugin/SKILL.md) | Submit a plugin to the Claude directory and link it to its connector |
+| [`flisk-list-github-action`](skills/flisk-list-github-action/SKILL.md) | Release an action and publish it to the GitHub Actions Marketplace |
+| [`flisk-list-marketplaces`](skills/flisk-list-marketplaces/SKILL.md) | Apify, MCP Registry, Glama, Smithery, mcp.so, awesome lists |
+| [`flisk-list-openai-plugin`](skills/flisk-list-openai-plugin/SKILL.md) | Package and submit a server to OpenAI as a plugin |
+| [`flisk-list-toolradar`](skills/flisk-list-toolradar/SKILL.md) | Submit or claim a product on Toolradar |
 
 ## Evidence
 
@@ -71,6 +110,11 @@ Console fields like the name, description, icon and SEO text are set in Apify Co
 ## Layout
 
 ```
+INSTALL.md                         add each MCP server to Claude, Gemini CLI, Cursor, Codex, ChatGPT
+skills/                            one skill per channel (see Skills above)
+claude-directory/                  connectors and plugins in the Claude directory
+openai/                            OpenAI plugin packages (parked)
+toolradar/                         Toolradar listing copy and status
 apify/actors/flisk-app-starter/    pick what to build, get a working app
 apify/actors/flisk-stack-scanner/  see every piece of an app in a GitHub link
 apify/assets/                      the Flisk bolt icon
