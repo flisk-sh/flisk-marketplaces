@@ -1,14 +1,14 @@
 # Claude directory
 
-Listings for `claude.ai/directory/manage` (Anthropic's directory of connectors and plugins). Status as of **2026-10-31**.
+Listings for `claude.ai/directory/manage` (Anthropic's directory of connectors and plugins). Status as of **2026-10-31** (updated at the end of the day).
 The playbook, with every trap hit so far, is the skill in [`skills/flisk-distribute`](../skills/flisk-distribute/SKILL.md).
 
 ## Connectors (one remote MCP server each)
 
 | Display name | Slug | Server | Icon | State |
 | --- | --- | --- | --- | --- |
-| Build Me an App | `flisk-app-builder` (slug can't change) | `https://mcp.flisk.sh/mcp` | `https://mcp.flisk.sh/icon-512.png` | Draft after edits; the user ticks the policy boxes and submits |
-| Put My Page Online | `put-my-page-online` | `https://pages.flisk.si/mcp` | `https://pages.flisk.si/icon-512.png` | Draft at step 8 |
+| Build Me an App | `flisk-app-builder` (slug can't change) | `https://mcp.flisk.sh/mcp` | `https://mcp.flisk.sh/icon-512.png` | Renamed from "Flisk App Builder"; back to Draft after the edits; the user presses Submit. One listing only: a second "build-me-an-app" draft by another session should be dropped |
+| Put My Page Online | `put-my-page-online` | `https://pages.flisk.si/mcp` | `https://pages.flisk.si/icon-512.png` | Draft at step 8 of 10; the self-test box, the compliance boxes and Submit are the user's. The MCP lives at `pages.flisk.si/mcp` (route `pages.flisk.si/mcp*`, record proxied); repo PR #57 merged |
 | Get My Site Found by AI | `ai-search-checker` | `https://citable.flisk.si/mcp` | `https://citable.flisk.si/icon-512.png` | Published; rename in review |
 | Improve My README | `readme-checker` | `https://readme.flisk.si/mcp` | `https://readme.flisk.si/icon-512.png` | Published; rename in review |
 
@@ -19,7 +19,7 @@ Not listed yet: Helpdock (`https://helpdock.flisk.sh/mcp`, "Flisk docs" help cen
 | Plugin | Repo and path | State |
 | --- | --- | --- |
 | Flisk | `flisk-sh/flisk`, `plugins/flisk-claude` | In review |
-| Put My Page Online | `flisk-sh/pages`, `plugins/put-my-page-online` | Form filled and validated; waiting for the terms boxes |
+| Put My Page Online | `flisk-sh/pages`, `plugins/put-my-page-online` | Form filled and validated through step 4 of 5 (answers No/No/Not retained/No); waiting for the four terms boxes and Submit |
 | AI search checker | `flisk-sh/citable`, `plugins/ai-search-checker` | Submitted, awaiting a reviewer |
 | Improve My README | `flisk-sh/readme-score`, `plugins/readme-checker` | Submitted, awaiting a reviewer |
 

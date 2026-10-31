@@ -37,3 +37,13 @@
 **Description (paste, adapt per product):** what it does in the first sentence, who it is for, that it is free and needs no account, and what it does not do (the MCP servers only read, check or plan: nothing is stored). Plain words; no "AI-powered" filler.
 
 **Company:** Flisk, https://flisk.sh. Use a company email on the flisk domain if one exists; otherwise the form may ask for proof of role.
+
+## Keep the listings right from Claude (Connect Claude)
+
+Toolradar has an MCP at `https://toolradar.com/api/mcp`. Create a key on `toolradar.com/company/connect` (the user does this; the key is shown once and is a secret: never put it in chat, a repo or a skill), then:
+
+```bash
+claude mcp add --scope user --transport http toolradar https://toolradar.com/api/mcp --header "Authorization: Bearer YOUR_KEY"
+```
+
+Then "update my Toolradar listing" runs `update_my_listing`: it reads the pricing page, shows what differs, and edits after the user agrees. It can edit only the live listings (Flisk CLI, Flisk demos as of 2026-10-31). It refuses marketing claims, rankings, scores and reviews. Set up on this Mac on 2026-10-31; a key pasted in chat once should be rotated.

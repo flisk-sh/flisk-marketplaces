@@ -15,3 +15,5 @@ Copy, URLs, taglines and logos are in `toolradar/README.md`. Read it first and k
 6. Anything that sends a request for review, accepts terms, or involves payment: ask first. Toolradar offers paid growth and advertising: never buy; the free editorial listing is the goal.
 7. **At most 2 submissions per hour**; do them two at a time and wait. A personal email triggers a domain confirmation: tell the user to reply from a company address or claim the profile.
 8. Reviews take about 24 to 48 hours. Record the submission date and status in `toolradar/README.md`, and in the table of `flisk-distribute`.
+
+9. To edit a live listing, prefer the Toolradar MCP (`update_my_listing`, see `toolradar/README.md`). The key is the user's: never ask for it, print it, or store it in the repo.
