@@ -1,0 +1,14 @@
+{
+  "positive": [
+    "Can ChatGPT find my site example.com?",
+    "Why is my site not quoted by AI search?",
+    "Check flisk.sh for AI search.",
+    "What should I fix first so AI can read my site?",
+    "Is my site blocked for AI crawlers?"
+  ],
+  "negative": [
+    "Rank my site on Google for a keyword.",
+    "Write blog posts for my site.",
+    "Log in to my site and check my admin panel."
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "build-me-an-app",
+  "version": "1.0.0",
+  "description": "Say what app you want, get a plan in everyday words and the exact commands to run it on your own computer.",
+  "author": {
+    "name": "Flisk",
+    "url": "https://flisk.sh"
+  },
+  "displayName": "Build Me an App",
+  "shortDescription": "Plan an app in plain words",
+  "longDescription": "Tell it what app you want: an online shop, a website with login, a booking app, an AI helper. It answers in everyday words with what the app is made of, and the exact commands to build and run it on your own computer with Flisk. It can also list the ready-made starter apps. Free, no account, no key. It only plans: nothing is created, sent or stored. Running the app needs Docker Desktop.",
+  "developerName": "Flisk",
+  "category": "Developer Tools",
+  "capabilities": [
+    "Interactive"
+  ],
+  "websiteURL": "https://flisk.sh",
+  "supportURL": "https://github.com/flisk-sh/flisk/issues",
+  "privacyPolicyURL": "https://mcp.flisk.sh/",
+  "termsOfServiceURL": "https://github.com/flisk-sh/flisk-marketplaces/blob/main/openai/TERMS.md",
+  "logo": "./assets/logo.png",
+  "composerIcon": "./assets/logo.png",
+  "skills": "./skills/"
+}

@@ -1,0 +1,24 @@
+{
+  "name": "get-my-site-found-by-ai",
+  "version": "1.0.0",
+  "description": "Check whether AI search (ChatGPT, Claude, Perplexity, Google) can find and quote your site.",
+  "author": {
+    "name": "Flisk",
+    "url": "https://flisk.sh"
+  },
+  "displayName": "Get My Site Found by AI",
+  "shortDescription": "Can AI search find your site?",
+  "longDescription": "Give it your site's address and it checks whether AI answer engines (ChatGPT search, Claude, Perplexity, Google AI Overviews, Copilot) can crawl, read and quote it, then tells you in plain words what to fix first. Free, no account, no key. It only reads public pages: nothing is stored.",
+  "developerName": "Flisk",
+  "category": "Marketing",
+  "capabilities": [
+    "Interactive"
+  ],
+  "websiteURL": "https://citable.flisk.si",
+  "supportURL": "https://github.com/flisk-sh/citable/issues",
+  "privacyPolicyURL": "https://citable.flisk.si/",
+  "termsOfServiceURL": "https://github.com/flisk-sh/flisk-marketplaces/blob/main/openai/TERMS.md",
+  "logo": "./assets/logo.png",
+  "composerIcon": "./assets/logo.png",
+  "skills": "./skills/"
+}

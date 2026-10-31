@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "build-me-an-app": {
+      "url": "https://mcp.flisk.sh/mcp"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "positive": [
+    "I want an online shop for my bakery. What is it made of, and how do I run it?",
+    "Which ready-made starter apps are there?",
+    "Plan a website with login.",
+    "Plan a restaurant booking app.",
+    "Plan an AI helper for my team."
+  ],
+  "negative": [
+    "Deploy my app to production for me (it only plans).",
+    "Write the full source code of my shop (it gives a plan and commands).",
+    "Delete my Docker containers."
+  ]
+}

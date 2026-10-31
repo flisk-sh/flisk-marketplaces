@@ -1,0 +1,24 @@
+{
+  "name": "improve-my-readme",
+  "version": "1.0.0",
+  "description": "Score a README out of 100 and get plain-words fixes.",
+  "author": {
+    "name": "Flisk",
+    "url": "https://flisk.sh"
+  },
+  "displayName": "Improve My README",
+  "shortDescription": "Score and improve a README",
+  "longDescription": "Give it a GitHub repo, or paste a README, and it scores it out of 100 with fixed checks (no model): the sections a reader expects, and what to add first. Free, no account, no key. It only reads public files: nothing is stored.",
+  "developerName": "Flisk",
+  "category": "Developer Tools",
+  "capabilities": [
+    "Interactive"
+  ],
+  "websiteURL": "https://readme.flisk.si",
+  "supportURL": "https://github.com/flisk-sh/readme-score/issues",
+  "privacyPolicyURL": "https://readme.flisk.si/",
+  "termsOfServiceURL": "https://github.com/flisk-sh/flisk-marketplaces/blob/main/openai/TERMS.md",
+  "logo": "./assets/logo.png",
+  "composerIcon": "./assets/logo.png",
+  "skills": "./skills/"
+}

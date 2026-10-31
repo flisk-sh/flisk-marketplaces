@@ -1,0 +1,14 @@
+{
+  "positive": [
+    "Score the README of flisk-sh/flisk.",
+    "Improve my README, here it is: # My tool",
+    "What is missing from my README?",
+    "Score my README out of 100.",
+    "What should I add to my README first?"
+  ],
+  "negative": [
+    "Write my whole project documentation.",
+    "Fix the bugs in my code.",
+    "Merge a pull request for me."
+  ]
+}
