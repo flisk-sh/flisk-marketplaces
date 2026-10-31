@@ -77,6 +77,9 @@ Screenshots taken 2026-10-30 from the live pages.
 **Glama: Flisk App Builder**
 ![Glama listing](docs/evidence/glama-flisk-app-builder.jpg)
 
+**Claude directory: our submissions (plugins and MCP connectors)**
+![Claude directory submissions page](docs/evidence/claude-directory-submissions.png)
+
 **Official MCP Registry**
 ![Official MCP Registry search for flisk](docs/evidence/mcp-registry.jpg)
 
