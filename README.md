@@ -82,9 +82,9 @@ Ask how to use Flisk in plain words: [`how do I start`, `docs for deploy`, or pa
 | --- | --- | --- | --- |
 | [**Glossary**](https://glossary.flisk.si) | [glossary.flisk.si](https://glossary.flisk.si/mcp) | `define_term` | Tech words in plain English |
 | [**Roast**](https://roast.flisk.si) | [roast.flisk.si](https://roast.flisk.si/mcp) | `roast_idea` | Honest critique of an idea, with a fix |
-| [**Does My Site Match?**](https://match.flisk.si) | [match.flisk.si](https://match.flisk.si/mcp) | `match_my_story` | Finds where README and website disagree |
-| [**Pick My Tagline**](https://tagline.flisk.si) | [tagline.flisk.si](https://tagline.flisk.si/mcp) | `score_taglines` | Scores taglines, picks the best |
-| [**Check My Links**](https://links.flisk.si) | [links.flisk.si](https://links.flisk.si/mcp) | `check_links` | Checks up to ten https links |
+| [**Match**](https://match.flisk.si) | [match.flisk.si](https://match.flisk.si/mcp) | `match_my_story` | Finds where README and website disagree |
+| [**Tagline**](https://tagline.flisk.si) | [tagline.flisk.si](https://tagline.flisk.si/mcp) | `score_taglines` | Scores taglines, picks the best |
+| [**Links**](https://links.flisk.si) | [links.flisk.si](https://links.flisk.si/mcp) | `check_links` | Checks up to ten https links |
 
 </details>
 
