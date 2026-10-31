@@ -33,3 +33,12 @@ Limits: displayName ≤ 30, shortDescription ≤ 30, longDescription ≤ 4000; a
 ## Codex users (no submission needed)
 
 `codex mcp add flisk-app-builder --url https://mcp.flisk.sh/mcp`, or `~/.codex/config.toml`; the official Codex directory's self-serve submission was "coming soon" in the sources found, so the portal above is the route. Community lists take PRs (see `flisk-list-marketplaces`).
+
+## Prompts (required in every listing)
+
+Every MCP server ships prompts as well as tools. Before any listing or submission:
+1. Check the live server answers `prompts/list` with the expected names (see the curl in README.md). If it returns "Method not found", the server isn't deployed with prompts yet: deploy first, and ask the user for the deploy yes.
+2. Put the prompt names and what each one needs (for example `build_my_app` needs `what`) in the listing's prompt field, the copy, and the test steps.
+3. Prompts are read-only text the client shows to the user; they don't call anything themselves. Say so in the reviewer notes.
+
+The OpenAI package ships tools through `.mcp.json`; the prompts come from the same server. Mention the prompt names in `longDescription` and in the test cases so reviewers can run them.

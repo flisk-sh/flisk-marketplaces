@@ -37,3 +37,12 @@ Not here: use `flisk-list-claude-connector`, `flisk-list-claude-plugin`, `flisk-
 ## Rules
 
 Never create accounts, sign in, or post for the user. Verify by calling the marketplace, not by a third-party page. Names in the words people type.
+
+## Prompts (required in every listing)
+
+Every MCP server ships prompts as well as tools. Before any listing or submission:
+1. Check the live server answers `prompts/list` with the expected names (see the curl in README.md). If it returns "Method not found", the server isn't deployed with prompts yet: deploy first, and ask the user for the deploy yes.
+2. Put the prompt names and what each one needs (for example `build_my_app` needs `what`) in the listing's prompt field, the copy, and the test steps.
+3. Prompts are read-only text the client shows to the user; they don't call anything themselves. Say so in the reviewer notes.
+
+Apify, MCP Registry, Glama, Toolradar and awesome-list entries: name the prompts where the form allows it (description, features or tags).

@@ -25,17 +25,27 @@ Status on **2026-10-31**. Details, rules read and next steps are in [MARKETPLACE
 | PulseMCP | Submissions paused (as of 2026-10-07) |
 | Agent-skills lists (VoltAgent, heilcheng) | Not eligible yet: new repo, 2 stars |
 
-## The apps and their MCP tools
+## The apps, their MCP tools and prompts
 
-All are remote, read-only and keyless (no account, nothing stored). How to add each one to Claude, Claude Code, Gemini CLI, Cursor, Codex and ChatGPT: [INSTALL.md](INSTALL.md).
+All are remote, read-only and keyless (no account, nothing stored). Each one has **tools** (what the AI calls) and **prompts** (ready-made starts a user picks in the client, such as a slash command or a prompt menu). A listing needs both: the directory shows the prompt names, and a server without prompts shows an empty "Prompts" section. How to add each one to Claude, Claude Code, Gemini CLI, Cursor, Codex and ChatGPT: [INSTALL.md](INSTALL.md).
 
-| App | MCP server | Tools | Site | Repo |
-| --- | --- | --- | --- | --- |
-| Build Me an App | `https://mcp.flisk.sh/mcp` | `plan_app`, `list_app_starters` | [flisk.sh](https://flisk.sh) | [flisk-sh/flisk](https://github.com/flisk-sh/flisk) (`workers/app-builder-mcp`) |
-| Put My Page Online | `https://pages.flisk.si/mcp` | `check_page`, `how_to_put_page_online` | [pages.flisk.si](https://pages.flisk.si) | [flisk-sh/pages](https://github.com/flisk-sh/pages) |
-| Get My Site Found by AI (Citable) | `https://citable.flisk.si/mcp` | `check_site` | [citable.flisk.si](https://citable.flisk.si) | [flisk-sh/citable](https://github.com/flisk-sh/citable) |
-| Improve My README (README Score) | `https://readme.flisk.si/mcp` | `score_readme` | [readme.flisk.si](https://readme.flisk.si) | [flisk-sh/readme-score](https://github.com/flisk-sh/readme-score) |
-| Flisk docs (Helpdock, a docs help center, not an app builder) | `https://helpdock.flisk.sh/mcp` | `search_docs`, `ask_help_center` | [helpdock.flisk.sh](https://helpdock.flisk.sh) | |
+| App | MCP server | Tools | Prompts | Site | Repo |
+| --- | --- | --- | --- | --- | --- |
+| Build Me an App | `https://mcp.flisk.sh/mcp` | `plan_app`, `list_app_starters` | `build_my_app` (needs `what`), `pick_a_starter` | [flisk.sh](https://flisk.sh) | [flisk-sh/flisk](https://github.com/flisk-sh/flisk) (`workers/app-builder-mcp`) |
+| Put My Page Online | `https://pages.flisk.si/mcp` | `check_page`, `how_to_put_page_online` | `put_my_page_online` | [pages.flisk.si](https://pages.flisk.si) | [flisk-sh/pages](https://github.com/flisk-sh/pages) |
+| Get My Site Found by AI (Citable) | `https://citable.flisk.si/mcp` | `check_site` | `check_my_site` (needs `url`) | [citable.flisk.si](https://citable.flisk.si) | [flisk-sh/citable](https://github.com/flisk-sh/citable) |
+| Improve My README (README Score) | `https://readme.flisk.si/mcp` | `score_readme` | `improve_my_readme` (needs `repo`) | [readme.flisk.si](https://readme.flisk.si) | [flisk-sh/readme-score](https://github.com/flisk-sh/readme-score) |
+| Flisk docs (Helpdock, a docs help center, not an app builder) | `https://helpdock.flisk.sh/mcp` | `search_docs`, `ask_help_center` | none yet (blocked: see Helpdock note) | [helpdock.flisk.sh](https://helpdock.flisk.sh) | |
+
+## Prompts are part of every listing
+
+A listing (Claude directory connector or plugin, OpenAI plugin, Toolradar copy, Apify or MCP Registry entry) must say which **prompts** the server offers, not only its tools. Each MCP server answers `prompts/list` and `prompts/get` and declares the `prompts` capability. Before listing, check the live server:
+
+```bash
+curl -s -X POST https://<host>/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"prompts/list","params":{}}'
+```
+
+A plugin that bundles a server (`.mcp.json` plus skills) lists the server's prompts in its listing as well as its skills.
 
 ## Where each channel is documented
 
