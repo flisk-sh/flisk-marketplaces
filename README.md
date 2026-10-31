@@ -1,141 +1,147 @@
-# Flisk Marketplaces
+<div align="center">
 
-Listings, Actors and packages that make [Flisk](https://flisk.sh) discoverable on public marketplaces. One folder per marketplace.
+# Flisk, everywhere your AI looks
 
-Flisk builds and runs a whole app on your computer with one command. These listings say that in plain words: what you can build (an online shop, a website, a booking app, an AI helper), not what the tool is called.
+**Build and run a whole app on your own computer, from one sentence.**
+Free. No account. No API key. Nothing is stored.
 
-## Are we everywhere? Not yet.
+[Install the MCP servers](INSTALL.md) · [Framework (maintainers)](FRAMEWORK.md) · [Marketplace rules](MARKETPLACES.md) · [Skills](skills)
 
-Status on **2026-10-31**. Details, rules read and next steps are in [MARKETPLACES.md](MARKETPLACES.md).
+</div>
 
-| Where | State |
+---
+
+## Our apps
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### ⚡ Build Me an App
+Say what you want: *an online shop, a booking app, a website with login.* Get the parts, and the exact commands to run it.
+
+**MCP:** `https://mcp.flisk.sh/mcp`
+**Tools:** `plan_app`, `list_app_starters`
+**Prompts:** `build_my_app`, `pick_a_starter`
+
+</td>
+<td width="50%" valign="top">
+
+### 📄 Put My Page Online
+Check your page before it goes live, then get a free public link.
+
+**MCP:** `https://pages.flisk.si/mcp`
+**Tools:** `check_page`, `how_to_put_page_online`
+**Prompts:** `put_my_page_online`
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🔎 Get My Site Found by AI
+Can ChatGPT, Claude and Perplexity find, read and quote your site? Get a score and the fix for each problem.
+
+**MCP:** `https://citable.flisk.si/mcp`
+**Tools:** `check_site`
+**Prompts:** `check_my_site`
+
+</td>
+<td width="50%" valign="top">
+
+### ✅ Improve My README
+A README scored out of 100, with a fix for every miss. Same README, same score, no AI guessing.
+
+**MCP:** `https://readme.flisk.si/mcp`
+**Tools:** `score_readme`
+**Prompts:** `improve_my_readme`
+
+</td>
+</tr>
+</table>
+
+<details>
+<summary><b>📚 Flisk docs, Helpdock</b> (a help center, not an app builder)</summary>
+
+Ask how to use Flisk in plain words: *"how do I start", "docs for deploy", or paste an error.*
+
+**MCP:** `https://helpdock.flisk.sh/mcp` · **Tools:** `search_docs`, `ask_help_center` · **Prompts:** coming soon.
+Status: the connection fix is in review, so the Claude directory listing is waiting.
+
+</details>
+
+---
+
+## Where we are listed
+
+Status on **2026-10-31**. ✅ live · ⏳ in review · 🟡 draft · ⛔ blocked · ⬜ not started
+
+| Where | Build Me an App | Put My Page Online | Get My Site Found by AI | Improve My README | Flisk CLI |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| **Claude directory** (connectors) | ✅ published | 🟡 draft | ✅ published | ✅ published | — |
+| **Claude directory** (plugins) | — | ⏳ waiting for terms | ⏳ scan passed | ⏳ scan passed | ⏳ in review |
+| **Toolradar** | ⏳ being checked | ⏳ being checked | ⏳ being checked | ⏳ being checked | ✅ live |
+| **Official MCP Registry** | — | ⬜ | ⬜ | ⬜ | ✅ |
+| **Glama** | — | ⬜ | ⬜ | ⬜ | ✅ |
+| **Apify Store** | — | — | — | — | ✅ Actors live |
+| **GitHub Actions Marketplace** | — | ⬜ | ⬜ | ⬜ | — |
+| **npm** | — | ⬜ not published | ✅ 0.1.0 | ⬜ not published | ✅ |
+| **OpenAI (ChatGPT, Codex)** | ⏸ parked | ⏸ parked | ⏸ parked | ⏸ parked | — |
+| **Smithery, mcp.so, Cursor** | ⬜ needs login | ⬜ | ⬜ | ⬜ | ⬜ |
+
+### Screenshots
+
+<table>
+<tr>
+<td width="50%"><img src="docs/evidence/claude-directory-build-me-an-app.jpg" alt="Build Me an App published in the Claude directory"><br><sub><b>Claude directory:</b> Build Me an App, published, with its prompts.</sub></td>
+<td width="50%"><img src="docs/evidence/toolradar-submissions.jpg" alt="Toolradar submissions page"><br><sub><b>Toolradar:</b> Build Me an App, README Score, Citable and Pages are being checked.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/evidence/claude-directory-submissions.png" alt="Claude directory submissions list"><br><sub><b>Claude directory:</b> the plugin and connector queue.</sub></td>
+<td width="50%"><img src="docs/evidence/mcp-registry.jpg" alt="Official MCP Registry search for flisk"><br><sub><b>Official MCP Registry:</b> Flisk listed.</sub></td>
+</tr>
+<tr>
+<td width="50%"><img src="docs/evidence/glama-flisk-app-builder.jpg" alt="Glama listing"><br><sub><b>Glama:</b> Flisk App Builder listed.</sub></td>
+<td width="50%"><img src="docs/evidence/apify-app-starter.jpg" alt="Apify Store App Starter"><br><sub><b>Apify Store:</b> App Starter, live.</sub></td>
+</tr>
+</table>
+
+---
+
+## Use it in your AI (30 seconds)
+
+| Your AI | Do this |
 | --- | --- |
-| [Apify Store: App Starter](https://apify.com/flisk/flisk-app-starter) | **Live.** Pick what to build, get a working app. Not yet in Store search results (index lag) |
-| [Apify Store: App Checker](https://apify.com/flisk/flisk-stack-scanner) | **Live.** Not yet in Store search results |
-| [Official MCP Registry](https://registry.modelcontextprotocol.io/?q=flisk) | **Live** as `io.github.flisk-sh/flisk` |
-| [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk) | **Live** as "Flisk App Builder", claimed, with a Glama release (2026-10-30, discovery score 58%). `glama.json` is in the flisk repo root. Quality rating still being evaluated |
-| [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers/pull/18048) | PR open, waiting for review |
-| [awesome-vibe-coding](https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/226) | PR open, waiting for review |
-| [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1144) | PR open, waiting for review |
-| [OpenAI (ChatGPT, Codex)](openai/) | **Parked** (2026-10-31). 4 plugin packages built, not submitted: the platform still asked for identity verification (Persona ID check, separate from billing), then each server needs a domain token, real terms and a demo video |
-| [Toolradar](toolradar/README.md) | Flisk CLI and Flisk demos **live**; Pages and Citable submitted (waiting for the domain confirmation email); README Score and Build Me an App queued (2 submissions per hour). MCP connected |
-| [Install the MCP servers](INSTALL.md) | How to add each server to Claude, Claude Code, Gemini CLI, Cursor and Codex |
-| [Claude directory](claude-directory/README.md) | 4 connectors and 4 plugins, in different stages of review. See the folder for each one |
-| mcp.so, Cursor Directory, Smithery | Not done: need a login |
-| PulseMCP | Submissions paused (as of 2026-10-07) |
-| Agent-skills lists (VoltAgent, heilcheng) | Not eligible yet: new repo, 2 stars |
+| **Claude** (web, desktop, mobile) | Settings → Connectors → add the URL, or find it in the Claude directory |
+| **Claude Code** | `claude mcp add --transport http flisk-app-builder https://mcp.flisk.sh/mcp` |
+| **Gemini CLI, Cursor, Codex** | Paste the snippet in [INSTALL.md](INSTALL.md) |
+| **Anywhere** | Prompts: `build_my_app`, `put_my_page_online`, `check_my_site`, `improve_my_readme` |
 
-## The apps, their MCP tools and prompts
+Every server is **read-only**: it plans, checks or scores. It creates nothing, sends nothing and stores nothing.
 
-All are remote, read-only and keyless (no account, nothing stored). Each one has **tools** (what the AI calls) and **prompts** (ready-made starts a user picks in the client, such as a slash command or a prompt menu). A listing needs both: the directory shows the prompt names, and a server without prompts shows an empty "Prompts" section. How to add each one to Claude, Claude Code, Gemini CLI, Cursor, Codex and ChatGPT: [INSTALL.md](INSTALL.md).
+---
 
-| App | MCP server | Tools | Prompts | Site | Repo |
-| --- | --- | --- | --- | --- | --- |
-| Build Me an App | `https://mcp.flisk.sh/mcp` | `plan_app`, `list_app_starters` | `build_my_app` (needs `what`), `pick_a_starter` | [flisk.sh](https://flisk.sh) | [flisk-sh/flisk](https://github.com/flisk-sh/flisk) (`workers/app-builder-mcp`) |
-| Put My Page Online | `https://pages.flisk.si/mcp` | `check_page`, `how_to_put_page_online` | `put_my_page_online` | [pages.flisk.si](https://pages.flisk.si) | [flisk-sh/pages](https://github.com/flisk-sh/pages) |
-| Get My Site Found by AI (Citable) | `https://citable.flisk.si/mcp` | `check_site` | `check_my_site` (needs `url`) | [citable.flisk.si](https://citable.flisk.si) | [flisk-sh/citable](https://github.com/flisk-sh/citable) |
-| Improve My README (README Score) | `https://readme.flisk.si/mcp` | `score_readme` | `improve_my_readme` (needs `repo`) | [readme.flisk.si](https://readme.flisk.si) | [flisk-sh/readme-score](https://github.com/flisk-sh/readme-score) |
-| Flisk docs (Helpdock, a docs help center, not an app builder) | `https://helpdock.flisk.sh/mcp` | `search_docs`, `ask_help_center` | none yet (blocked: see Helpdock note) | [helpdock.flisk.sh](https://helpdock.flisk.sh) | |
+## What is still coming
 
-## Prompts are part of every listing
+| | What | Why it matters |
+| :---: | --- | --- |
+| 🐳 | **Prebuilt Docker layers on Docker Hub** | First run is faster; the one-command demo gets quicker for everyone |
+| 🔧 | Helpdock connection fix goes live | Unlocks Helpdock in the Claude directory and Toolradar |
+| 📦 | npm for README Score and Pages | `npx` installs for those two |
+| 🏪 | GitHub Actions Marketplace for Pages, Citable and README Score | Listed where teams already look |
+| 🧭 | OpenAI (ChatGPT, Codex) | Waiting on identity verification, domain tokens, terms and a demo video |
 
-A listing (Claude directory connector or plugin, OpenAI plugin, Toolradar copy, Apify or MCP Registry entry) must say which **prompts** the server offers, not only its tools. Each MCP server answers `prompts/list` and `prompts/get` and declares the `prompts` capability. Before listing, check the live server:
+Full detail, with owners for each gap: [FRAMEWORK.md](FRAMEWORK.md).
 
-```bash
-curl -s -X POST https://<host>/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' -d '{"jsonrpc":"2.0","id":1,"method":"prompts/list","params":{}}'
-```
+---
 
-A plugin that bundles a server (`.mcp.json` plus skills) lists the server's prompts in its listing as well as its skills.
+<details>
+<summary><b>For maintainers</b></summary>
 
-## Where each channel is documented
+- **Status and rules per marketplace:** [MARKETPLACES.md](MARKETPLACES.md) · [claude-directory/](claude-directory/README.md) · [toolradar/](toolradar/README.md) · [openai/](openai) (parked)
+- **Skills** (copied to `~/.claude/skills`): [`flisk-distribute`](skills/flisk-distribute/SKILL.md), [`flisk-install-mcp`](skills/flisk-install-mcp/SKILL.md), [`flisk-list-claude-connector`](skills/flisk-list-claude-connector/SKILL.md), [`flisk-list-claude-plugin`](skills/flisk-list-claude-plugin/SKILL.md), [`flisk-list-github-action`](skills/flisk-list-github-action/SKILL.md), [`flisk-list-marketplaces`](skills/flisk-list-marketplaces/SKILL.md), [`flisk-list-openai-plugin`](skills/flisk-list-openai-plugin/SKILL.md), [`flisk-list-toolradar`](skills/flisk-list-toolradar/SKILL.md), [`flisk-test-mcp`](skills/flisk-test-mcp/SKILL.md)
+- **Test every server and plugin:** `python3 skills/flisk-test-mcp/test_mcp.py evidence/run --plugins-root ~/tdk-pr-work`
+- **Apify Actors:** `apify/` · publish with `apify push` · end-to-end check `e2e/apify.sh`
+- **Glama build check:** `glama/Dockerfile`
 
-| Channel | Folder | Skill |
-| --- | --- | --- |
-| Claude directory (connectors and plugins) | [claude-directory/](claude-directory/README.md) | `flisk-list-claude-connector`, `flisk-list-claude-plugin` |
-| Apify Store, MCP Registry, Glama, awesome lists | [MARKETPLACES.md](MARKETPLACES.md), [apify/](apify), [glama/](glama) | `flisk-list-marketplaces` |
-| OpenAI (ChatGPT, Codex), parked | [openai/](openai) | `flisk-list-openai-plugin` |
-| Toolradar | [toolradar/](toolradar/README.md) | `flisk-list-toolradar` |
-| GitHub Actions Marketplace | (in the app repos) | `flisk-list-github-action` |
-| How a user adds a server | [INSTALL.md](INSTALL.md) | `flisk-install-mcp` |
-| Overview and the table of what is listed | | `flisk-distribute` |
-
-## Skills
-
-In [`skills/`](skills). Copy a folder to `~/.claude/skills/` to use it in Claude Code.
-
-| Skill | Use it to |
-| --- | --- |
-| [`flisk-distribute`](skills/flisk-distribute/SKILL.md) | See what is listed where, and the conventions (names, hosts, who ticks what) |
-| [`flisk-install-mcp`](skills/flisk-install-mcp/SKILL.md) | Give a user the exact steps to add a server to their client |
-| [`flisk-list-claude-connector`](skills/flisk-list-claude-connector/SKILL.md) | Submit or edit a connector in the Claude directory |
-| [`flisk-list-claude-plugin`](skills/flisk-list-claude-plugin/SKILL.md) | Submit a plugin to the Claude directory and link it to its connector |
-| [`flisk-list-github-action`](skills/flisk-list-github-action/SKILL.md) | Release an action and publish it to the GitHub Actions Marketplace |
-| [`flisk-list-marketplaces`](skills/flisk-list-marketplaces/SKILL.md) | Apify, MCP Registry, Glama, Smithery, mcp.so, awesome lists |
-| [`flisk-list-openai-plugin`](skills/flisk-list-openai-plugin/SKILL.md) | Package and submit a server to OpenAI as a plugin |
-| [`flisk-list-toolradar`](skills/flisk-list-toolradar/SKILL.md) | Submit or claim a product on Toolradar |
-| [`flisk-test-mcp`](skills/flisk-test-mcp/SKILL.md) | Test every MCP server and plugin for real, and keep the evidence in `evidence/` |
-
-## Evidence
-
-Screenshots taken 2026-10-30 from the live pages.
-
-**Apify: App Starter**
-![Apify Store page for App Starter](docs/evidence/apify-app-starter.jpg)
-
-**Apify: App Checker**
-![Apify Store page for App Checker](docs/evidence/apify-stack-scanner.jpg)
-
-**Glama: Flisk App Builder**
-![Glama listing](docs/evidence/glama-flisk-app-builder.jpg)
-
-**Claude directory: our submissions (plugins and MCP connectors)**
-![Claude directory submissions page](docs/evidence/claude-directory-submissions.png)
-
-**Official MCP Registry**
-![Official MCP Registry search for flisk](docs/evidence/mcp-registry.jpg)
-
-**Open pull requests**
-
-![awesome-mcp-servers pull request 18048](docs/evidence/pr-awesome-mcp-servers-18048.jpg)
-![awesome-vibe-coding pull request 226](docs/evidence/pr-awesome-vibe-coding-226.jpg)
-![awesome-ai-coding-tools pull request 1144](docs/evidence/pr-awesome-ai-coding-tools-1144.jpg)
-
-The Apify screenshots show a cookie banner and a survey bar from Apify's own page.
-
-## What is tested
-
-[`e2e/apify.sh`](e2e/apify.sh) runs both Actors on Apify for real. It downloads every starter from its signed link, checks it holds a valid project and that `flisk up --dry-run` plans it, runs the two website starters' printed steps, and checks the checker on a known-good app. It passes against the public Actors.
-
-```bash
-e2e/apify.sh        # needs apify-cli logged in, python3, curl, unzip; flisk is optional
-```
-
-## Publish to Apify
-
-```bash
-npm i -g apify-cli
-apify login
-cd apify/actors/flisk-app-starter   # or flisk-stack-scanner
-apify push
-```
-
-Console fields like the name, description, icon and SEO text are set in Apify Console → Publication and are **not** overwritten by `apify push`.
-
-## Layout
-
-```
-INSTALL.md                         add each MCP server to Claude, Gemini CLI, Cursor, Codex, ChatGPT
-skills/                            one skill per channel (see Skills above)
-claude-directory/                  connectors and plugins in the Claude directory
-openai/                            OpenAI plugin packages (parked)
-toolradar/                         Toolradar listing copy and status
-apify/actors/flisk-app-starter/    pick what to build, get a working app
-apify/actors/flisk-stack-scanner/  see every piece of an app in a GitHub link
-apify/assets/                      the Flisk bolt icon
-glama/Dockerfile                   the same setup as Glama's build form (build step and CMD), for local testing
-e2e/apify.sh                       end-to-end check of the live Actors
-docs/evidence/                     screenshots
-MARKETPLACES.md                    every marketplace, its rules and next step
-```
-
-Add a new marketplace as its own top-level folder with its own README covering how to publish there.
+</details>
