@@ -18,6 +18,7 @@ Status on **2026-10-30**. Details, rules read and next steps are in [MARKETPLACE
 | [awesome-vibe-coding](https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/226) | PR open, waiting for review |
 | [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1144) | PR open, waiting for review |
 | [OpenAI (ChatGPT, Codex)](openai/) | 4 plugin packages built, **not submitted**: needs your OpenAI verification, a domain token on each server, terms and a demo video |
+| [Toolradar](toolradar/README.md) | Not submitted: needs your sign-in. Listing copy ready for 5 products |
 | [Install the MCP servers](INSTALL.md) | How to add each server to Claude, Claude Code, Gemini CLI, Cursor and Codex |
 | [Claude directory](claude-directory/README.md) | 4 connectors and 4 plugins, in different stages of review. See the folder for each one |
 | mcp.so, Cursor Directory, Smithery | Not done: need a login |
