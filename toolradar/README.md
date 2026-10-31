@@ -6,7 +6,23 @@
 - Claim a product already listed: `https://toolradar.com/claim?tool=<slug>` (company email domain and role are checked).
 - Why list: `https://toolradar.com/vendors`.
 
-State on 2026-10-31: sign-in wall only; nothing submitted. The form fields below are what we expect to be asked; confirm against the real form.
+## State on 2026-10-31
+
+| Product | State |
+| --- | --- |
+| Flisk CLI (flisk.sh), Flisk demos (demo.flisk.sh) | Live, submitted 2026-10-25 |
+| Pages (pages.flisk.si) | Submitted 2026-10-31, waiting for the domain confirmation email |
+| Citable (citable.flisk.si) | Submitted 2026-10-31, same. Another, unrelated "Citable" is already on Toolradar: not ours |
+| README Score (readme.flisk.si) | **Not yet**: the 2-tools-per-hour limit was hit; retry after an hour |
+| Build Me an App (mcp.flisk.sh) | **Not yet**, same limit |
+
+## How the form works (read from the real form)
+
+- Start from the website URL and press **Auto-fill**: it fills name, tagline, description, who it is for, 3 to 5 features and pricing from the product's own site. The result was factual; check it, then **Submit for review**.
+- **Limit: 2 submissions per hour.** A third shows "You're submitting too quickly".
+- Submitting from a personal email (gmail) sends a confirmation email: reply from an address on the product's domain, or claim the profile with a company email, and the review starts. Clean listings from verified companies go live within minutes; others are read within ten business days.
+- Optional: badge page URL and first-party facts for a richer listing (they ask for a link back to Toolradar).
+- The sidebar has Submissions (status of each), Analytics, Reviews, Badges and Claude connection.
 
 ## Products to list (copy to paste)
 
