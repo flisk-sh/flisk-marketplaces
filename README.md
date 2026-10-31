@@ -17,6 +17,7 @@ Status on **2026-10-30**. Details, rules read and next steps are in [MARKETPLACE
 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers/pull/18048) | PR open, waiting for review |
 | [awesome-vibe-coding](https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/226) | PR open, waiting for review |
 | [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1144) | PR open, waiting for review |
+| [Install the MCP servers](INSTALL.md) | How to add each server to Claude, Claude Code, Gemini CLI, Cursor and Codex |
 | [Claude directory](claude-directory/README.md) | 4 connectors and 4 plugins, in different stages of review. See the folder for each one |
 | mcp.so, Cursor Directory, Smithery | Not done: need a login |
 | PulseMCP | Submissions paused (as of 2026-10-07) |

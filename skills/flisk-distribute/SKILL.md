@@ -5,6 +5,8 @@ description: Distribute and keep in sync every Flisk app and tool we list (Citab
 
 # Distribute Flisk apps
 
+This is the overview and the table of what is listed. For the steps of one channel, use its own skill: `flisk-list-claude-connector`, `flisk-list-claude-plugin`, `flisk-list-github-action`, and `flisk-install-mcp` (how users add a server to Claude, Claude Code, Gemini CLI, Cursor or Codex; see `INSTALL.md`).
+
 One playbook for putting the Flisk apps in front of people. Each channel below says what to check, what to do and what
 went wrong before. **Publishing, merging, deploying and accepting terms are the user's call: ask first, then do.**
 
