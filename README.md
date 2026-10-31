@@ -17,8 +17,8 @@ Status on **2026-10-30**. Details, rules read and next steps are in [MARKETPLACE
 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers/pull/18048) | PR open, waiting for review |
 | [awesome-vibe-coding](https://github.com/awesome-vibe-coding/awesome-vibe-coding/pull/226) | PR open, waiting for review |
 | [awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools/pull/1144) | PR open, waiting for review |
-| [OpenAI (ChatGPT, Codex)](openai/) | 4 plugin packages built, **not submitted**: needs your OpenAI verification, a domain token on each server, terms and a demo video |
-| [Toolradar](toolradar/README.md) | Not submitted: needs your sign-in. Listing copy ready for 5 products |
+| [OpenAI (ChatGPT, Codex)](openai/) | **Parked** (2026-10-31). 4 plugin packages built, not submitted: the platform still asked for identity verification (Persona ID check, separate from billing), then each server needs a domain token, real terms and a demo video |
+| [Toolradar](toolradar/README.md) | Flisk CLI and Flisk demos **live**; Pages and Citable submitted (waiting for the domain confirmation email); README Score and Build Me an App queued (2 submissions per hour). MCP connected |
 | [Install the MCP servers](INSTALL.md) | How to add each server to Claude, Claude Code, Gemini CLI, Cursor and Codex |
 | [Claude directory](claude-directory/README.md) | 4 connectors and 4 plugins, in different stages of review. See the folder for each one |
 | mcp.so, Cursor Directory, Smithery | Not done: need a login |
