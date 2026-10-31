@@ -177,7 +177,7 @@ Every server is **read-only**: [it plans, checks or scores](FRAMEWORK.md). It cr
 
 | | Gap | Owner |
 | :---: | --- | --- |
-| 🐳 | [**Prebuilt Docker layers on Docker Hub**](https://hub.docker.com/) (faster first run for the demo) | [Maintainer](FRAMEWORK.md) |
+| 🐳 | [**Prebuilt Docker layers on Docker Hub**](https://hub.docker.com/u/flisk-sh) under `flisk-sh`: L1 to L3, then L4 (faster first run for the demo) | [Maintainer](FRAMEWORK.md) |
 | 🔧 | [Helpdock connection fix deployed](https://github.com/flisk-sh/helpdock/pull/5) | [User approves deploy](https://github.com/flisk-sh/helpdock/pull/5) |
 | 📦 | [npm for README Score and Pages](https://www.npmjs.com/) | [User (npm sign-in)](https://www.npmjs.com/) |
 | ⚙️ | [GitHub Actions Marketplace for Pages, Citable, README Score](https://github.com/marketplace?type=actions) | [Maintainer](https://github.com/marketplace?type=actions) |

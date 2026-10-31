@@ -14,8 +14,9 @@ Checked 2026-10-29. "Verified" means I called the marketplace or read the file; 
 | 8 | Claude Code plugin marketplace | `flisk-cli` plugin | **Exists** in `flisk-sh/flisk` (`.claude-plugin/marketplace.json`, verified) | Users run `/plugin marketplace add flisk-sh/flisk` |
 | 9 | [skills.sh](https://skills.sh) / agent skills | `flisk-sh/flisk-skills` | Repo exists (verified); installs straight from GitHub (from search) | Check `npx skills add flisk-sh/flisk-skills` works |
 | 10 | [Cursor Directory](https://cursor.directory) | MCP server entry | Unchecked | Submit with the copy below |
+| 11 | [Docker Hub](https://hub.docker.com/u/flisk-sh) | namespace `flisk-sh`: prebuilt golden layers L1 to L3, L4 later, other images after that | **Planned** (checked 2026-10-31): `flisk-sh` is free; the organization is not created yet, because "Create organization" leads to a paid Docker Team checkout. `flisk` is taken by someone else | Maintainer creates the `flisk-sh` organization and picks the plan, then pushes L1 to L3. The flisk repo's `docs/troubleshoot-l1.md` still says the layers are never pushed: change it in the same release |
 
-I did not create accounts, sign in, or post to any of these for you. #4, #6, #7 and #10 need a login, and #5 should wait for #4.
+I did not create accounts, sign in, or post to any of these for you. #4, #6, #7, #10 and #11 need a login, and #5 should wait for #4.
 
 ## Paste-ready copy
 
