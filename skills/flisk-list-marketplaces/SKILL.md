@@ -1,11 +1,11 @@
 ---
 name: flisk-list-marketplaces
-description: List and keep up to date the Flisk apps on public marketplaces and directories other than the Claude directory: Apify Store Actors, the official MCP Registry, Glama, Smithery, mcp.so, PulseMCP, Cursor Directory, skills.sh and awesome lists. Use when asked to publish to, check, or add Flisk to Apify or any public marketplace, or "are we everywhere".
+description: List and keep up to date the Flisk apps on public marketplaces and directories other than the Claude directory: Apify Store Actors, the official MCP Registry, Glama, Smithery, mcp.so, PulseMCP, Cursor Directory, skills.sh, Docker Hub and awesome lists. Use when asked to publish to, check, or add Flisk to Apify or any public marketplace, or "are we everywhere".
 ---
 
 # List Flisk on public marketplaces
 
-The source of truth is this repo: `README.md` (status table), `MARKETPLACES.md` (rules read, decisions, paste-ready copy), `apify/` (Actor sources), `glama/Dockerfile`, `e2e/apify.sh`. Read them first, then update them after every change, with the date.
+The source of truth is the `flisk-sh/flisk-marketplaces` repo (locally `~/tdk-pr-work/flisk-marketplaces`), not `flisk-sh/flisk`: never add a `MARKETPLACES.md` to the flisk repo. Its files: `README.md` (status table), `MARKETPLACES.md` (rules read, decisions, paste-ready copy), `apify/` (Actor sources), `glama/Dockerfile`, `e2e/apify.sh`. Read them first, then update them after every change, with the date.
 
 ## Apify Store
 
@@ -21,6 +21,10 @@ Listed as `io.github.flisk-sh/flisk` (the local `flisk mcp` stdio server). Verif
 ## Glama
 
 "Flisk App Builder" (flisk-sh/flisk), claimed. `glama.json` is in the flisk repo root; `glama/Dockerfile` is what the quality checks build. Re-release after server changes so the score refreshes.
+
+## Docker Hub
+
+Namespace `flisk-sh` (`flisk` is taken by someone else; never use the personal `alexdykyi`). Planned images: the golden layers L1 to L3, L4 later, other images after that. The organization is not created yet: "Create organization" leads to a paid Docker Team checkout, so the user creates it and picks the plan. Before the first push, change the flisk repo's `docs/troubleshoot-l1.md`, which says the layers are never pushed.
 
 ## Needs a login (the user does it)
 
