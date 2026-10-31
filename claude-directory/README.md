@@ -29,3 +29,11 @@ Not listed yet: Helpdock (`https://helpdock.flisk.sh/mcp`, "Flisk docs" help cen
 - The directory takes the favicon of the registrable domain, so always set a custom icon URL to the server's own `/icon-512.png`.
 - A person ticks the policy checkboxes and presses the final Submit; everything else can be filled by an agent.
 - MCP host is `<app host>/mcp`.
+
+## Evidence
+
+Taken 2026-10-31 from `claude.ai/directory/manage` (the list only, no account details):
+
+![Claude directory submissions](../docs/evidence/claude-directory-submissions.png)
+
+What it shows: plugin Flisk **with a reviewer**; plugins AI Search Checker and README Checker **scan passed, publish requested, waiting for an Anthropic reviewer**; connectors AI Search Checker and README Checker **published**; connector Build Me an App **draft**. The two published connectors still show a letter ("A", "B") in this list instead of their icon: the custom icon URL is set on the listing, and the public page needs a re-check.
