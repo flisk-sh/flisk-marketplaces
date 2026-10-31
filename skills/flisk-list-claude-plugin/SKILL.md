@@ -15,3 +15,12 @@ Portal: `claude.ai/directory/manage/new/plugin`. Five steps.
 6. When its connector is approved: plugin page → Content tab → "Link existing listing" → the connector's slug.
 
 The directory tracks the default branch and rescans new commits, so merge fixes before submitting. Claude Code users install from a marketplace repo: `/plugin marketplace add flisk-sh/flisk`.
+
+## Prompts (required in every listing)
+
+Every MCP server ships prompts as well as tools. Before any listing or submission:
+1. Check the live server answers `prompts/list` with the expected names (see the curl in README.md). If it returns "Method not found", the server isn't deployed with prompts yet: deploy first, and ask the user for the deploy yes.
+2. Put the prompt names and what each one needs (for example `build_my_app` needs `what`) in the listing's prompt field, the copy, and the test steps.
+3. Prompts are read-only text the client shows to the user; they don't call anything themselves. Say so in the reviewer notes.
+
+A plugin bundles a server (`.mcp.json`) and skills. Its listing shows the server's prompts too: check them on the live server before validating the plugin.

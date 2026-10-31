@@ -107,3 +107,12 @@ the read-only servers). Keep the Helpdock / Flisk distinction above.
 ## After any change
 
 Update the table at the top of this file, list what is live and what still waits on the user, and name the exact next step.
+
+## Prompts (required in every listing)
+
+Every MCP server ships prompts as well as tools. Before any listing or submission:
+1. Check the live server answers `prompts/list` with the expected names (see the curl in README.md). If it returns "Method not found", the server isn't deployed with prompts yet: deploy first, and ask the user for the deploy yes.
+2. Put the prompt names and what each one needs (for example `build_my_app` needs `what`) in the listing's prompt field, the copy, and the test steps.
+3. Prompts are read-only text the client shows to the user; they don't call anything themselves. Say so in the reviewer notes.
+
+Current prompts (live 2026-10-31): build_my_app, pick_a_starter (mcp.flisk.sh); put_my_page_online (pages.flisk.si); check_my_site (citable.flisk.si); improve_my_readme (readme.flisk.si). Helpdock has none yet.

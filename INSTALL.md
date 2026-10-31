@@ -65,6 +65,10 @@ url = "https://mcp.flisk.sh/mcp"
 
 Settings → Apps / Connectors → turn on developer mode → add a custom connector with the URL (names and menus change; check OpenAI's current docs). Once listed, find the plugin in the ChatGPT directory.
 
+## Prompts
+
+Each server also offers ready-made prompts (see the table in README.md). After adding a server, look for its prompts in your client's prompt menu. Check them with `prompts/list`.
+
 ## Check it works
 
 ```bash

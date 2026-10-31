@@ -17,3 +17,12 @@ Copy, URLs, taglines and logos are in `toolradar/README.md`. Read it first and k
 8. Reviews take about 24 to 48 hours. Record the submission date and status in `toolradar/README.md`, and in the table of `flisk-distribute`.
 
 9. To edit a live listing, prefer the Toolradar MCP (`update_my_listing`, see `toolradar/README.md`). The key is the user's: never ask for it, print it, or store it in the repo.
+
+## Prompts (required in every listing)
+
+Every MCP server ships prompts as well as tools. Before any listing or submission:
+1. Check the live server answers `prompts/list` with the expected names (see the curl in README.md). If it returns "Method not found", the server isn't deployed with prompts yet: deploy first, and ask the user for the deploy yes.
+2. Put the prompt names and what each one needs (for example `build_my_app` needs `what`) in the listing's prompt field, the copy, and the test steps.
+3. Prompts are read-only text the client shows to the user; they don't call anything themselves. Say so in the reviewer notes.
+
+Toolradar has no prompt field: put the prompt names in the description ("Ready-made prompts: ...").
