@@ -1,0 +1,92 @@
+{
+  "target": "build-me-an-app",
+  "url": "https://mcp.flisk.sh/mcp",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "initialize",
+      "ok": true,
+      "detail": "status 200, server flisk-app-builder, capabilities ['tools', 'prompts']"
+    },
+    {
+      "check": "tools/list",
+      "ok": true,
+      "detail": "tools ['list_app_starters', 'plan_app'], expected ['list_app_starters', 'plan_app']"
+    },
+    {
+      "check": "annotations plan_app",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "annotations list_app_starters",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "tools/call plan_app",
+      "ok": true,
+      "detail": "status 200, isError False, text {\"you_get\":\"web: the website people see; api: the server behind it; api-migrator: sets up the database\",\"parts\":[{\"name\":\"web\",\"is\":\"the website people see\",\"de"
+    },
+    {
+      "check": "tools/call list_app_starters",
+      "ok": true,
+      "detail": "status 200, isError False, text {\"starters\":[{\"kind\":\"Restaurant booking and kitchen\",\"say_something_like\":[\"restaurant\",\"restaurants\",\"reservation\",\"reservations\"],\"repo\":\"https://github.com/"
+    },
+    {
+      "check": "unknown tool is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown tool: no_such_tool'}"
+    },
+    {
+      "check": "prompts/list",
+      "ok": true,
+      "detail": "prompts ['build_my_app', 'pick_a_starter'], expected ['build_my_app', 'pick_a_starter']"
+    },
+    {
+      "check": "prompts/get build_my_app",
+      "ok": true,
+      "detail": "text Plan this app with the plan_app tool, using this description: \"an online shop for a bakery\". Show what it is made of, then the commands to run it on my computer"
+    },
+    {
+      "check": "prompts/get build_my_app without its required argument is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown prompt or missing argument: build_my_app'}"
+    },
+    {
+      "check": "prompts/get pick_a_starter",
+      "ok": true,
+      "detail": "text Call list_app_starters, show the ready-made apps, and help me choose the one closest to what I want to build."
+    },
+    {
+      "check": "unknown method is refused (-32601)",
+      "ok": true,
+      "detail": "{'code': -32601, 'message': 'Method not found: no/such_method'}"
+    },
+    {
+      "check": "bad JSON is refused (-32700, HTTP 400)",
+      "ok": true,
+      "detail": "status 400 {\n  \"jsonrpc\": \"2.0\",\n  \"id\": null,\n  \"error\": {\n    \"code\": -32700,\n    \"messag"
+    },
+    {
+      "check": "GET is refused (405)",
+      "ok": true,
+      "detail": "status 405"
+    },
+    {
+      "check": "accepts a JSON-only client (not 406)",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "check": "icon-512.png is a PNG",
+      "ok": true,
+      "detail": "status 200 image/png"
+    },
+    {
+      "check": "favicon.ico is served",
+      "ok": false,
+      "detail": "status 0  error: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ]
+}

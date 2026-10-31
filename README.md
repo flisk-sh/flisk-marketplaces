@@ -73,6 +73,7 @@ In [`skills/`](skills). Copy a folder to `~/.claude/skills/` to use it in Claude
 | [`flisk-list-marketplaces`](skills/flisk-list-marketplaces/SKILL.md) | Apify, MCP Registry, Glama, Smithery, mcp.so, awesome lists |
 | [`flisk-list-openai-plugin`](skills/flisk-list-openai-plugin/SKILL.md) | Package and submit a server to OpenAI as a plugin |
 | [`flisk-list-toolradar`](skills/flisk-list-toolradar/SKILL.md) | Submit or claim a product on Toolradar |
+| [`flisk-test-mcp`](skills/flisk-test-mcp/SKILL.md) | Test every MCP server and plugin for real, and keep the evidence in `evidence/` |
 
 ## Evidence
 
