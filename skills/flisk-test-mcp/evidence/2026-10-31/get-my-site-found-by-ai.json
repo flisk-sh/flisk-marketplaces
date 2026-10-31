@@ -1,0 +1,77 @@
+{
+  "target": "get-my-site-found-by-ai",
+  "url": "https://citable.flisk.si/mcp",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "initialize",
+      "ok": true,
+      "detail": "status 200, server citable, capabilities ['tools', 'prompts']"
+    },
+    {
+      "check": "tools/list",
+      "ok": true,
+      "detail": "tools ['check_site'], expected ['check_site']"
+    },
+    {
+      "check": "annotations check_site",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "tools/call check_site",
+      "ok": true,
+      "detail": "status 200, isError False, text https://example.com/: 50/100 (grade D) for AI search.\n\n[pass] AI answer engines can crawl the page (25/25): No robots.txt (404), so every crawler may fetch this"
+    },
+    {
+      "check": "unknown tool is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown tool: no_such_tool'}"
+    },
+    {
+      "check": "prompts/list",
+      "ok": true,
+      "detail": "prompts ['check_my_site'], expected ['check_my_site']"
+    },
+    {
+      "check": "prompts/get check_my_site",
+      "ok": true,
+      "detail": "text Check example.com with check_site. Say whether AI answer engines can find, read and cite it, then list the fixes in order of importance."
+    },
+    {
+      "check": "prompts/get check_my_site without its required argument is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown prompt or missing argument: check_my_site'}"
+    },
+    {
+      "check": "unknown method is refused (-32601)",
+      "ok": true,
+      "detail": "{'code': -32601, 'message': 'Method not found: no/such_method'}"
+    },
+    {
+      "check": "bad JSON is refused (-32700, HTTP 400)",
+      "ok": true,
+      "detail": "status 400 {\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}"
+    },
+    {
+      "check": "GET is refused (405)",
+      "ok": true,
+      "detail": "status 405"
+    },
+    {
+      "check": "accepts a JSON-only client (not 406)",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "check": "icon-512.png is a PNG",
+      "ok": true,
+      "detail": "status 200 image/png"
+    },
+    {
+      "check": "favicon.ico is served",
+      "ok": true,
+      "detail": "status 200 image/x-icon"
+    }
+  ]
+}

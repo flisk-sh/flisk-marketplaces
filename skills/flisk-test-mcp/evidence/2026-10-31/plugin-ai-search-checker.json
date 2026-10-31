@@ -1,0 +1,32 @@
+{
+  "target": "ai-search-checker",
+  "path": "citable/plugins/ai-search-checker",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "plugin.json parses and has name, version, description, author",
+      "ok": true,
+      "detail": "name ai-search-checker version 1.0.0"
+    },
+    {
+      "check": "manifest icon file exists",
+      "ok": true,
+      "detail": "./.claude-plugin/icon.png"
+    },
+    {
+      "check": "at least one skill with frontmatter name and description",
+      "ok": true,
+      "detail": "skills ['get-found-by-ai']"
+    },
+    {
+      "check": ".mcp.json points at the live server",
+      "ok": true,
+      "detail": "urls ['https://citable.flisk.si/mcp']"
+    },
+    {
+      "check": "the server in .mcp.json answers initialize",
+      "ok": true,
+      "detail": "status 200"
+    }
+  ]
+}

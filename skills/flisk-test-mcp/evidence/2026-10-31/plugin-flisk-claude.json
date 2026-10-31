@@ -1,0 +1,27 @@
+{
+  "target": "flisk-claude",
+  "path": "flisk/plugins/flisk-claude",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "plugin.json parses and has name, version, description, author",
+      "ok": true,
+      "detail": "name flisk version 1.0.0"
+    },
+    {
+      "check": "manifest icon file exists",
+      "ok": true,
+      "detail": "./.claude-plugin/icon.png"
+    },
+    {
+      "check": "at least one skill with frontmatter name and description",
+      "ok": true,
+      "detail": "skills ['flisk-agent-ops', 'flisk-build', 'flisk-convert', 'flisk-doctor', 'flisk-recipe-ai-agent', 'flisk-recipe-blog', 'flisk-recipe-saas', 'flisk-recipe-shop', 'flisk-recipe-starters', 'flisk-resource', 'flisk-status', 'flisk-troubleshoot', 'flisk-up']"
+    },
+    {
+      "check": ".mcp.json points at the live server",
+      "ok": true,
+      "detail": "command scripts ['/Users/san4osq/tdk-pr-work/flisk/plugins/flisk-claude/scripts/flisk-mcp.sh']"
+    }
+  ]
+}

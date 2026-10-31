@@ -1,0 +1,77 @@
+{
+  "target": "improve-my-readme",
+  "url": "https://readme.flisk.si/mcp",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "initialize",
+      "ok": true,
+      "detail": "status 200, server readme-score, capabilities ['tools', 'prompts']"
+    },
+    {
+      "check": "tools/list",
+      "ok": true,
+      "detail": "tools ['score_readme'], expected ['score_readme']"
+    },
+    {
+      "check": "annotations score_readme",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "tools/call score_readme",
+      "ok": true,
+      "detail": "status 200, isError False, text The pasted README.md: 46/100 (F) as a CLI tool; 7 checks pass, 13 fail.\nProject type: CLI tool (nothing in the README says otherwise).\n\nFix first:\n- Sections / "
+    },
+    {
+      "check": "unknown tool is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown tool: no_such_tool'}"
+    },
+    {
+      "check": "prompts/list",
+      "ok": true,
+      "detail": "prompts ['improve_my_readme'], expected ['improve_my_readme']"
+    },
+    {
+      "check": "prompts/get improve_my_readme",
+      "ok": true,
+      "detail": "text Score the README of flisk-sh/flisk with score_readme. Show the score out of 100, then the fixes, most important first."
+    },
+    {
+      "check": "prompts/get improve_my_readme without its required argument is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown prompt or missing argument: improve_my_readme'}"
+    },
+    {
+      "check": "unknown method is refused (-32601)",
+      "ok": true,
+      "detail": "{'code': -32601, 'message': 'Method not found: no/such_method'}"
+    },
+    {
+      "check": "bad JSON is refused (-32700, HTTP 400)",
+      "ok": true,
+      "detail": "status 400 {\"jsonrpc\":\"2.0\",\"id\":null,\"error\":{\"code\":-32700,\"message\":\"Parse error\"}}"
+    },
+    {
+      "check": "GET is refused (405)",
+      "ok": true,
+      "detail": "status 405"
+    },
+    {
+      "check": "accepts a JSON-only client (not 406)",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "check": "icon-512.png is a PNG",
+      "ok": true,
+      "detail": "status 200 image/png"
+    },
+    {
+      "check": "favicon.ico is served",
+      "ok": true,
+      "detail": "status 200 image/x-icon"
+    }
+  ]
+}

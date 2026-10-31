@@ -1,0 +1,77 @@
+{
+  "target": "helpdock",
+  "url": "https://helpdock.flisk.sh/mcp",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "initialize",
+      "ok": true,
+      "detail": "status 200, server helpdock: Flisk docs, capabilities ['tools']"
+    },
+    {
+      "check": "tools/list",
+      "ok": true,
+      "detail": "tools ['ask_help_center', 'search_docs'], expected ['ask_help_center', 'search_docs']"
+    },
+    {
+      "check": "annotations search_docs",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "annotations ask_help_center",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "tools/call search_docs",
+      "ok": true,
+      "detail": "status 200, isError None, text {\n  \"query\": \"deploy\",\n  \"hits\": [\n    {\n      \"n\": 1,\n      \"title\": \"⚡ Flisk mega cheat sheet\",\n      \"section\": \"flisk up [stack-name] (alias deploy)\",\n     "
+    },
+    {
+      "check": "tools/call ask_help_center",
+      "ok": true,
+      "detail": "status 200, isError None, text {\n  \"reply\": \"Here's what the docs say:\\n\\n[1] Local data: where it lives, how to reset, seed and snapshot › Start from a clean state\\nThe database comes back e"
+    },
+    {
+      "check": "unknown tool is refused",
+      "ok": true,
+      "detail": "{'content': [{'type': 'text', 'text': 'MCP error -32602: Tool no_such_tool not found'}], 'isError': True}"
+    },
+    {
+      "check": "prompts/list",
+      "ok": true,
+      "detail": "no prompts expected: {'jsonrpc': '2.0', 'id': 12, 'error': {'code': -32601, 'message': 'Method not found'}}"
+    },
+    {
+      "check": "unknown method is refused (-32601)",
+      "ok": true,
+      "detail": "{'code': -32601, 'message': 'Method not found'}"
+    },
+    {
+      "check": "bad JSON is refused (-32700, HTTP 400)",
+      "ok": true,
+      "detail": "status 400 {\"error\":\"body is not JSON\"}"
+    },
+    {
+      "check": "GET is refused (405)",
+      "ok": true,
+      "detail": "status 405"
+    },
+    {
+      "check": "accepts a JSON-only client (not 406)",
+      "ok": false,
+      "detail": "status 406"
+    },
+    {
+      "check": "icon-512.png is a PNG",
+      "ok": true,
+      "detail": "status 200 image/png"
+    },
+    {
+      "check": "favicon.ico is served",
+      "ok": true,
+      "detail": "status 200 image/x-icon"
+    }
+  ]
+}

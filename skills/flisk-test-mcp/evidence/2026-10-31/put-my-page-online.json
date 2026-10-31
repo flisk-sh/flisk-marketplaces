@@ -1,0 +1,82 @@
+{
+  "target": "put-my-page-online",
+  "url": "https://pages.flisk.si/mcp",
+  "run_at": "2026-10-31T11:59:41+00:00",
+  "checks": [
+    {
+      "check": "initialize",
+      "ok": true,
+      "detail": "status 200, server flisk-pages, capabilities ['tools', 'prompts']"
+    },
+    {
+      "check": "tools/list",
+      "ok": true,
+      "detail": "tools ['check_page', 'how_to_put_page_online'], expected ['check_page', 'how_to_put_page_online']"
+    },
+    {
+      "check": "annotations check_page",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "annotations how_to_put_page_online",
+      "ok": true,
+      "detail": "readOnlyHint=True"
+    },
+    {
+      "check": "tools/call check_page",
+      "ok": true,
+      "detail": "status 200, isError False, text {\"ready\":true,\"say_it_plainly\":\"The page passes the checks and can go online.\",\"problems\":[],\"worth_fixing\":[],\"report\":\"✓ ready to publish: 1 files, 0 KB\",\"nex"
+    },
+    {
+      "check": "tools/call how_to_put_page_online",
+      "ok": true,
+      "detail": "status 200, isError False, text {\"steps\":[\"Make the page: one .html file, or a folder with an index.html (or a single .md file for a text page).\",\"Check it first with check_page, or run: npx -"
+    },
+    {
+      "check": "unknown tool is refused",
+      "ok": true,
+      "detail": "{'code': -32602, 'message': 'Unknown tool: no_such_tool'}"
+    },
+    {
+      "check": "prompts/list",
+      "ok": true,
+      "detail": "prompts ['put_my_page_online'], expected ['put_my_page_online']"
+    },
+    {
+      "check": "prompts/get put_my_page_online",
+      "ok": true,
+      "detail": "text Check my page with check_page. Fix every problem it lists and check again until it passes. Then call how_to_put_page_online and give me the one command to put i"
+    },
+    {
+      "check": "unknown method is refused (-32601)",
+      "ok": true,
+      "detail": "{'code': -32601, 'message': 'Method not found: no/such_method'}"
+    },
+    {
+      "check": "bad JSON is refused (-32700, HTTP 400)",
+      "ok": true,
+      "detail": "status 400 {\n  \"jsonrpc\": \"2.0\",\n  \"id\": null,\n  \"error\": {\n    \"code\": -32700,\n    \"messag"
+    },
+    {
+      "check": "GET is refused (405)",
+      "ok": true,
+      "detail": "status 405"
+    },
+    {
+      "check": "accepts a JSON-only client (not 406)",
+      "ok": true,
+      "detail": "status 200"
+    },
+    {
+      "check": "icon-512.png is a PNG",
+      "ok": true,
+      "detail": "status 200 image/png"
+    },
+    {
+      "check": "favicon.ico is served",
+      "ok": true,
+      "detail": "status 200 image/vnd.microsoft.icon"
+    }
+  ]
+}
