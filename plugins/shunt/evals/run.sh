@@ -85,6 +85,11 @@ case "$out" in *HAIKU*) bad "SHUNT_BACKEND=ollama must not fall back" ;; *) ok ;
 
 out=$(SHUNT_OLLAMA_MAX_CHARS=10 PATH="$tmp/bin:$PATH" "$root/scripts/bulk-read" --question "what?" --paths "$tmp/small.txt" 2>&1)
 contains "big prompt skips ollama in auto" "HAIKU:1" "$out"
+mkdir -p "$tmp/failbin"
+printf '#!/usr/bin/env bash\ncat >/dev/null\necho "Failed to authenticate" >&2\nexit 1\n' >"$tmp/failbin/claude"
+chmod +x "$tmp/failbin/claude"
+out=$(SHUNT_OLLAMA_MAX_CHARS=10 PATH="$tmp/failbin:$PATH" "$root/scripts/bulk-read" --question "what?" --paths "$tmp/small.txt" 2>&1)
+contains "haiku failure retries ollama past the cap" "OLLAMA:True" "$out"
 out=$(SHUNT_BACKEND=ollama SHUNT_OLLAMA_MAX_CHARS=10 "$root/scripts/bulk-read" --question "what?" --paths "$tmp/small.txt" 2>&1)
 contains "explicit ollama ignores the size cap" "OLLAMA:True" "$out"
 
