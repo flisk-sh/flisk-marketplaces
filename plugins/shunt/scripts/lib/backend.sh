@@ -54,7 +54,7 @@ shunt_ask() {
       shunt_haiku "$system" "$prompt" && return 0
       # Haiku failed too (no login, offline): a slow local answer beats none, so retry Ollama past the size cap.
       echo "shunt: Haiku failed (try \`claude\` once to refresh the login); retrying Ollama without the size cap" >&2
-      SHUNT_FORCE_OLLAMA=1 shunt_ollama "$system" "$prompt"
+      SHUNT_FORCE_OLLAMA=1 SHUNT_TIMEOUT=$(( ${SHUNT_TIMEOUT:-120} * 3 )) shunt_ollama "$system" "$prompt"
       ;;
     *) echo "shunt: unknown SHUNT_BACKEND '$backend' (auto, ollama or haiku)" >&2; return 2 ;;
   esac
