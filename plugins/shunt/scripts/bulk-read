@@ -22,8 +22,8 @@ done
 corpus=""
 for p in "${paths[@]}"; do
   [ -f "$p" ] || { echo "bulk-read: no such file: $p" >&2; exit 1; }
-  corpus+=$(printf '<file path="%s">\n%s\n</file>\n' "$p" "$(cat "$p")")$'\n'
+  corpus+=$(printf '<file path="%s">\n%s\n</file>\n' "$p" "$(awk '{ printf "%d\t%s\n", NR, $0 }' "$p")")$'\n'
 done
 
-system="You are a precise code analyst. Read the provided files and answer the question concisely. Output structured bullets only. No greetings, no prose, no preambles, no summaries. Lead every bullet with the exact name, type, or line number. Skip anything the caller did not ask for. If the files do not contain the answer, say so."
+system="You are a precise code analyst. Read the provided files and answer the question concisely. Output structured bullets only. No greetings, no prose, no preambles, no summaries. Every file line starts with its line number and a tab; cite those numbers exactly and never guess one. Lead every bullet with the exact name, type, or line number. Skip anything the caller did not ask for. If the files do not contain the answer, say so."
 printf '%s\nQuestion: %s\n' "$corpus" "$question" | shunt_ask "$system"

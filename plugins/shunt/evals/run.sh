@@ -93,6 +93,11 @@ contains "haiku failure retries ollama past the cap" "OLLAMA:True" "$out"
 out=$(SHUNT_BACKEND=ollama SHUNT_OLLAMA_MAX_CHARS=10 "$root/scripts/bulk-read" --question "what?" --paths "$tmp/small.txt" 2>&1)
 contains "explicit ollama ignores the size cap" "OLLAMA:True" "$out"
 
+printf '#!/usr/bin/env bash\ncat\n' >"$tmp/bin/claude"
+printf 'alpha\nbeta\n' >"$tmp/two.txt"
+out=$(SHUNT_BACKEND=haiku PATH="$tmp/bin:$PATH" "$root/scripts/bulk-read" --question "q" --paths "$tmp/two.txt" 2>&1)
+contains "bulk-read numbers line 2" "$(printf '2\tbeta')" "$out"
+
 "$root/scripts/bulk-read" --question "x" >/dev/null 2>&1; expect "bulk-read needs paths" 2 $?
 "$root/scripts/bulk-read" --question "x" --paths "$tmp/none" >/dev/null 2>&1; expect "bulk-read missing file" 1 $?
 "$root/scripts/code-write" --spec "x" >/dev/null 2>&1; expect "code-write needs reference" 2 $?
