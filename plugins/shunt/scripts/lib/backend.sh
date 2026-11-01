@@ -12,8 +12,8 @@
 shunt_ollama() {
   local system="$1" prompt="$2" host="${SHUNT_OLLAMA_HOST:-http://localhost:11434}" body out ctx
   # A local 7B model needs minutes to read a big prompt on a laptop, so past this size auto mode goes straight to Haiku.
-  if [ "${SHUNT_BACKEND:-auto}" = auto ] && [ "${#prompt}" -gt "${SHUNT_OLLAMA_MAX_CHARS:-24000}" ]; then
-    echo "shunt: prompt is ${#prompt} characters, over SHUNT_OLLAMA_MAX_CHARS; skipping Ollama" >&2
+  if [ "${SHUNT_BACKEND:-auto}" = auto ] && [ -z "${SHUNT_FORCE_OLLAMA:-}" ] && [ "${#prompt}" -gt "${SHUNT_OLLAMA_MAX_CHARS:-24000}" ]; then
+    echo "shunt: prompt is ${#prompt} characters, over SHUNT_OLLAMA_MAX_CHARS; trying Haiku first" >&2
     return 1
   fi
   command -v curl >/dev/null 2>&1 || return 1
@@ -50,8 +50,11 @@ shunt_ask() {
     haiku) shunt_haiku "$system" "$prompt" ;;
     auto)
       shunt_ollama "$system" "$prompt" && return 0
-      echo "shunt: Ollama unavailable, falling back to Haiku" >&2
-      shunt_haiku "$system" "$prompt"
+      echo "shunt: falling back to Haiku" >&2
+      shunt_haiku "$system" "$prompt" && return 0
+      # Haiku failed too (no login, offline): a slow local answer beats none, so retry Ollama past the size cap.
+      echo "shunt: Haiku failed (try \`claude\` once to refresh the login); retrying Ollama without the size cap" >&2
+      SHUNT_FORCE_OLLAMA=1 shunt_ollama "$system" "$prompt"
       ;;
     *) echo "shunt: unknown SHUNT_BACKEND '$backend' (auto, ollama or haiku)" >&2; return 2 ;;
   esac
