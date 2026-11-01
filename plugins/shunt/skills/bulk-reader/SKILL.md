@@ -12,6 +12,7 @@ ${CLAUDE_PLUGIN_ROOT}/scripts/bulk-read --question "Which methods call the datab
 ```
 
 - Ask one specific question per call. Every call stands alone, so repeat the paths for a follow-up.
+- Files are sent with their real line numbers, so cited lines are copied, not guessed.
 - The answer comes from a small model: treat line numbers and names as leads and confirm them with `Read` and `offset`/`limit` before you rely on them or edit.
 - To edit, do not use this skill for the text itself. Read only the section you need with `offset` and `limit`.
 - Small files (under the threshold) are cheaper to just read.
