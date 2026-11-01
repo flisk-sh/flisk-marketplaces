@@ -5,16 +5,24 @@
 #
 # Backend order (SHUNT_BACKEND=auto|ollama|haiku, default auto): a local Ollama model first, then `claude -p --model haiku`.
 # Env: SHUNT_OLLAMA_HOST (http://localhost:11434), SHUNT_OLLAMA_MODEL (qwen2.5-coder:7b), SHUNT_HAIKU_MODEL (haiku),
-#      SHUNT_OLLAMA_CTX (32768, the context window requested from Ollama).
+#      SHUNT_OLLAMA_CTX (context window requested from Ollama; default: sized to the prompt, 4096 to 32768),
+#      SHUNT_OLLAMA_PREDICT (2048, the most tokens the worker may write), SHUNT_TIMEOUT (120 seconds before falling back).
 
 shunt_ollama() {
-  local system="$1" prompt="$2" host="${SHUNT_OLLAMA_HOST:-http://localhost:11434}" body out
+  local system="$1" prompt="$2" host="${SHUNT_OLLAMA_HOST:-http://localhost:11434}" body out ctx
   command -v curl >/dev/null 2>&1 || return 1
+  # A fixed 32k window makes the first token very slow on a laptop, so ask for about 3 characters per token plus room for the answer.
+  ctx="${SHUNT_OLLAMA_CTX:-$(( (${#system} + ${#prompt}) / 3 + ${SHUNT_OLLAMA_PREDICT:-2048} + 512 ))}"
+  [ "$ctx" -lt 4096 ] && ctx=4096
+  [ "$ctx" -gt 32768 ] && ctx=32768
   body=$(jq -n --arg model "${SHUNT_OLLAMA_MODEL:-qwen2.5-coder:7b}" --arg system "$system" --arg prompt "$prompt" \
-    --argjson ctx "${SHUNT_OLLAMA_CTX:-32768}" \
-    '{model: $model, stream: false, options: {temperature: 0.2, num_ctx: $ctx},
+    --argjson ctx "$ctx" --argjson predict "${SHUNT_OLLAMA_PREDICT:-2048}" \
+    '{model: $model, stream: false, options: {temperature: 0.2, num_ctx: $ctx, num_predict: $predict},
       messages: [{role: "system", content: $system}, {role: "user", content: $prompt}]}') || return 1
-  out=$(curl -fsS --max-time "${SHUNT_TIMEOUT:-300}" -H 'Content-Type: application/json' -d "$body" "$host/api/chat" 2>/dev/null) || return 1
+  out=$(curl -fsS --max-time "${SHUNT_TIMEOUT:-120}" -H 'Content-Type: application/json' -d "$body" "$host/api/chat" 2>&1) || {
+    echo "shunt: Ollama failed after at most ${SHUNT_TIMEOUT:-120}s (${SHUNT_OLLAMA_MODEL:-qwen2.5-coder:7b}): ${out:-no response}" >&2
+    return 1
+  }
   out=$(printf '%s' "$out" | jq -r '.message.content // empty') || return 1
   [ -n "$out" ] || return 1
   printf '%s\n' "$out"

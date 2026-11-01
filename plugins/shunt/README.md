@@ -31,9 +31,10 @@ claude plugin install shunt@flisk-marketplaces
 | `SHUNT_BACKEND` | `auto` | `auto` (Ollama, then Haiku), `ollama` or `haiku` |
 | `SHUNT_OLLAMA_HOST` | `http://localhost:11434` | Ollama server |
 | `SHUNT_OLLAMA_MODEL` | `qwen2.5-coder:7b` | Ollama model |
-| `SHUNT_OLLAMA_CTX` | `32768` | Context window requested from Ollama |
+| `SHUNT_OLLAMA_CTX` | sized to the prompt | Context window requested from Ollama (4096 to 32768) |
+| `SHUNT_OLLAMA_PREDICT` | `2048` | Most tokens the worker may write |
 | `SHUNT_HAIKU_MODEL` | `haiku` | Model alias for the fallback |
-| `SHUNT_TIMEOUT` | `300` | Seconds to wait for Ollama |
+| `SHUNT_TIMEOUT` | `120` | Seconds to wait for Ollama before falling back to Haiku |
 
 ## Limits
 
