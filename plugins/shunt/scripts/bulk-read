@@ -47,7 +47,9 @@ for p in "${paths[@]}"; do
     chunk=$(printf '<file path="%s" lines="%d-%d">\n%s\n</file>\nQuestion: %s\nThis is only lines %d-%d of a larger file. Report only what is in these lines. If nothing applies, reply exactly NONE.\n' \
       "$p" "$from" "$to" "$(numbered "$p" "$from" "$to")" "$question" "$from" "$to")
     answer=$(printf '%s' "$chunk" | SHUNT_BACKEND=ollama shunt_ask "$system") || answer=""
-    case "$answer" in '' | NONE | NONE.) ;; *) printf '## %s lines %d-%d\n%s\n' "$p" "$from" "$to" "$answer" ;; esac
+    # The worker may write "- NONE", "None." and the like; compare without bullets, case or punctuation.
+    bare=$(printf '%s' "$answer" | tr -d '[:space:][:punct:]' | tr '[:lower:]' '[:upper:]')
+    case "$bare" in '' | NONE) ;; *) printf '## %s lines %d-%d\n%s\n' "$p" "$from" "$to" "$answer" ;; esac
     from=$((to + 1))
   done
 done
