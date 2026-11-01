@@ -1,0 +1,20 @@
+{
+  "name": "flisk-marketplaces",
+  "owner": {
+    "name": "Flisk",
+    "url": "https://flisk.sh"
+  },
+  "metadata": {
+    "description": "Claude Code plugins from Flisk"
+  },
+  "plugins": [
+    {
+      "name": "shunt",
+      "description": "Saves tokens: blocks full reads of large files and sends them to a local Ollama model (Claude Haiku as the fallback) through bulk-read and code-write scripts.",
+      "source": "./plugins/shunt",
+      "homepage": "https://flisk.sh",
+      "license": "MIT",
+      "category": "development"
+    }
+  ]
+}
