@@ -104,6 +104,26 @@ contains "chunk 1 header" "lines 1-2" "$out"
 contains "chunk 3 header" "lines 5-6" "$out"
 contains "chunks use ollama" "OLLAMA:True" "$out"
 
+printf '#!/usr/bin/env bash\ncat >/dev/null\nexit 1\n' >"$tmp/failbin/claude"
+cat >"$tmp/none.py" <<'PY'
+import http.server, json
+class H(http.server.BaseHTTPRequestHandler):
+    def do_POST(self):
+        self.rfile.read(int(self.headers["Content-Length"]))
+        out = json.dumps({"message": {"content": "- None."}}).encode()
+        self.send_response(200); self.send_header("Content-Length", str(len(out))); self.end_headers(); self.wfile.write(out)
+    def log_message(self, *a): pass
+s = http.server.HTTPServer(("127.0.0.1", 0), H)
+print(s.server_port, flush=True)
+s.serve_forever()
+PY
+python3 "$tmp/none.py" >"$tmp/noneport" &
+nsrv=$!
+for _ in $(seq 1 50); do [ -s "$tmp/noneport" ] && break; sleep 0.1; done
+out=$(SHUNT_OLLAMA_HOST="http://127.0.0.1:$(cat "$tmp/noneport")" SHUNT_OLLAMA_MAX_CHARS=10 SHUNT_CHUNK_LINES=2 PATH="$tmp/failbin:$PATH" "$root/scripts/bulk-read" --question "what?" --paths "$tmp/five.txt" 2>/dev/null)
+kill "$nsrv" 2>/dev/null; wait "$nsrv" 2>/dev/null
+expect "'- None.' chunks are dropped" "" "$out"
+
 "$root/scripts/bulk-read" --question "x" >/dev/null 2>&1; expect "bulk-read needs paths" 2 $?
 "$root/scripts/bulk-read" --question "x" --paths "$tmp/none" >/dev/null 2>&1; expect "bulk-read missing file" 1 $?
 "$root/scripts/code-write" --spec "x" >/dev/null 2>&1; expect "code-write needs reference" 2 $?
