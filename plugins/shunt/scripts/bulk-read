@@ -19,11 +19,35 @@ while [ $# -gt 0 ]; do
 done
 [ -n "$question" ] && [ "${#paths[@]}" -gt 0 ] || { echo "usage: bulk-read --question \"...\" --paths FILE [FILE ...]" >&2; exit 2; }
 
+system="You are a precise code analyst. Read the provided files and answer the question concisely. Output structured bullets only. No greetings, no prose, no preambles, no summaries. Every file line starts with its line number and a tab; cite those numbers exactly and never guess one. Lead every bullet with the exact name, type, or line number. Skip anything the caller did not ask for. If the files do not contain the answer, say so."
+
+numbered() { # file, first line, last line: the slice with its real line numbers
+  awk -v a="$2" -v b="$3" 'NR >= a && NR <= b { printf "%d\t%s\n", NR, $0 }' "$1"
+}
+
 corpus=""
 for p in "${paths[@]}"; do
   [ -f "$p" ] || { echo "bulk-read: no such file: $p" >&2; exit 1; }
-  corpus+=$(printf '<file path="%s">\n%s\n</file>\n' "$p" "$(awk '{ printf "%d\t%s\n", NR, $0 }' "$p")")$'\n'
+  corpus+=$(printf '<file path="%s">\n%s\n</file>\n' "$p" "$(numbered "$p" 1 999999999)")$'\n'
 done
 
-system="You are a precise code analyst. Read the provided files and answer the question concisely. Output structured bullets only. No greetings, no prose, no preambles, no summaries. Every file line starts with its line number and a tab; cite those numbers exactly and never guess one. Lead every bullet with the exact name, type, or line number. Skip anything the caller did not ask for. If the files do not contain the answer, say so."
-printf '%s\nQuestion: %s\n' "$corpus" "$question" | shunt_ask "$system"
+rc=0
+printf '%s\nQuestion: %s\n' "$corpus" "$question" | SHUNT_CHUNKABLE=1 shunt_ask "$system" && exit 0 || rc=$?
+[ "$rc" -eq 75 ] || exit "$rc"
+
+# Haiku is unavailable and the files are too big for a local model to read at once, which makes it drift on line numbers and
+# take minutes. Ask about SHUNT_CHUNK_LINES lines at a time (real line numbers kept) and join the answers.
+step="${SHUNT_CHUNK_LINES:-250}"
+case "$step" in '' | *[!0-9]* | 0) step=250 ;; esac
+for p in "${paths[@]}"; do
+  total=$(awk 'END { print NR }' "$p")
+  from=1
+  while [ "$from" -le "$total" ]; do
+    to=$((from + step - 1))
+    chunk=$(printf '<file path="%s" lines="%d-%d">\n%s\n</file>\nQuestion: %s\nThis is only lines %d-%d of a larger file. Report only what is in these lines. If nothing applies, reply exactly NONE.\n' \
+      "$p" "$from" "$to" "$(numbered "$p" "$from" "$to")" "$question" "$from" "$to")
+    answer=$(printf '%s' "$chunk" | SHUNT_BACKEND=ollama shunt_ask "$system") || answer=""
+    case "$answer" in '' | NONE | NONE.) ;; *) printf '## %s lines %d-%d\n%s\n' "$p" "$from" "$to" "$answer" ;; esac
+    from=$((to + 1))
+  done
+done

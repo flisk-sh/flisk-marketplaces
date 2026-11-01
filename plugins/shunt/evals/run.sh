@@ -98,6 +98,12 @@ printf 'alpha\nbeta\n' >"$tmp/two.txt"
 out=$(SHUNT_BACKEND=haiku PATH="$tmp/bin:$PATH" "$root/scripts/bulk-read" --question "q" --paths "$tmp/two.txt" 2>&1)
 contains "bulk-read numbers line 2" "$(printf '2\tbeta')" "$out"
 
+seq 1 5 >"$tmp/five.txt"
+out=$(SHUNT_OLLAMA_MAX_CHARS=10 SHUNT_CHUNK_LINES=2 PATH="$tmp/failbin:$PATH" "$root/scripts/bulk-read" --question "what?" --paths "$tmp/five.txt" 2>&1)
+contains "chunk 1 header" "lines 1-2" "$out"
+contains "chunk 3 header" "lines 5-6" "$out"
+contains "chunks use ollama" "OLLAMA:True" "$out"
+
 "$root/scripts/bulk-read" --question "x" >/dev/null 2>&1; expect "bulk-read needs paths" 2 $?
 "$root/scripts/bulk-read" --question "x" --paths "$tmp/none" >/dev/null 2>&1; expect "bulk-read missing file" 1 $?
 "$root/scripts/code-write" --spec "x" >/dev/null 2>&1; expect "code-write needs reference" 2 $?

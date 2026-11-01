@@ -52,7 +52,12 @@ shunt_ask() {
       shunt_ollama "$system" "$prompt" && return 0
       echo "shunt: falling back to Haiku" >&2
       shunt_haiku "$system" "$prompt" && return 0
-      # Haiku failed too (no login, offline): a slow local answer beats none, so retry Ollama past the size cap.
+      # Haiku failed too (no login, offline). A caller that can split its prompt (SHUNT_CHUNKABLE) gets status 75 and does it;
+      # otherwise a slow local answer beats none, so retry Ollama past the size cap.
+      if [ -n "${SHUNT_CHUNKABLE:-}" ] && [ "${#prompt}" -gt "${SHUNT_OLLAMA_MAX_CHARS:-24000}" ]; then
+        echo "shunt: Haiku failed (try \`claude\` once to refresh the login); answering with Ollama in chunks" >&2
+        return 75
+      fi
       echo "shunt: Haiku failed (try \`claude\` once to refresh the login); retrying Ollama without the size cap" >&2
       SHUNT_FORCE_OLLAMA=1 SHUNT_TIMEOUT=$(( ${SHUNT_TIMEOUT:-120} * 3 )) shunt_ollama "$system" "$prompt"
       ;;
