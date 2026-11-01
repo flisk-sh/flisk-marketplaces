@@ -1,6 +1,6 @@
 {
   "name": "shunt",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Saves tokens by shunting big file reads and boilerplate generation to a local Ollama model, falling back to Claude Haiku. A hook blocks full reads of large files and points Claude at the bulk-read script.",
   "author": {
     "name": "Flisk",
