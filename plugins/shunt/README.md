@@ -35,6 +35,7 @@ claude plugin install shunt@flisk-marketplaces
 | `SHUNT_OLLAMA_PREDICT` | `2048` | Most tokens the worker may write |
 | `SHUNT_HAIKU_MODEL` | `haiku` | Model alias for the fallback |
 | `SHUNT_OLLAMA_MAX_CHARS` | `24000` | In `auto` mode, prompts bigger than this skip Ollama and go to Haiku |
+| `SHUNT_CHUNK_LINES` | `250` | When Haiku fails and the files are big, bulk-read asks Ollama about this many lines at a time |
 | `SHUNT_TIMEOUT` | `120` | Seconds to wait for Ollama before falling back to Haiku |
 
 ## Limits
