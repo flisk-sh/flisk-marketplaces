@@ -83,6 +83,11 @@ out=$(SHUNT_BACKEND=ollama SHUNT_OLLAMA_HOST="http://127.0.0.1:1" PATH="$tmp/bin
 contains "SHUNT_BACKEND=ollama reports the failure" "Ollama failed" "$out"
 case "$out" in *HAIKU*) bad "SHUNT_BACKEND=ollama must not fall back" ;; *) ok ;; esac
 
+out=$(SHUNT_OLLAMA_MAX_CHARS=10 PATH="$tmp/bin:$PATH" "$root/scripts/bulk-read" --question "what?" --paths "$tmp/small.txt" 2>&1)
+contains "big prompt skips ollama in auto" "HAIKU:1" "$out"
+out=$(SHUNT_BACKEND=ollama SHUNT_OLLAMA_MAX_CHARS=10 "$root/scripts/bulk-read" --question "what?" --paths "$tmp/small.txt" 2>&1)
+contains "explicit ollama ignores the size cap" "OLLAMA:True" "$out"
+
 "$root/scripts/bulk-read" --question "x" >/dev/null 2>&1; expect "bulk-read needs paths" 2 $?
 "$root/scripts/bulk-read" --question "x" --paths "$tmp/none" >/dev/null 2>&1; expect "bulk-read missing file" 1 $?
 "$root/scripts/code-write" --spec "x" >/dev/null 2>&1; expect "code-write needs reference" 2 $?

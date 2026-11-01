@@ -6,10 +6,16 @@
 # Backend order (SHUNT_BACKEND=auto|ollama|haiku, default auto): a local Ollama model first, then `claude -p --model haiku`.
 # Env: SHUNT_OLLAMA_HOST (http://localhost:11434), SHUNT_OLLAMA_MODEL (qwen2.5-coder:7b), SHUNT_HAIKU_MODEL (haiku),
 #      SHUNT_OLLAMA_CTX (context window requested from Ollama; default: sized to the prompt, 4096 to 32768),
-#      SHUNT_OLLAMA_PREDICT (2048, the most tokens the worker may write), SHUNT_TIMEOUT (120 seconds before falling back).
+#      SHUNT_OLLAMA_PREDICT (2048, the most tokens the worker may write), SHUNT_TIMEOUT (120 seconds before falling back),
+#      SHUNT_OLLAMA_MAX_CHARS (24000, bigger prompts skip Ollama in auto mode).
 
 shunt_ollama() {
   local system="$1" prompt="$2" host="${SHUNT_OLLAMA_HOST:-http://localhost:11434}" body out ctx
+  # A local 7B model needs minutes to read a big prompt on a laptop, so past this size auto mode goes straight to Haiku.
+  if [ "${SHUNT_BACKEND:-auto}" = auto ] && [ "${#prompt}" -gt "${SHUNT_OLLAMA_MAX_CHARS:-24000}" ]; then
+    echo "shunt: prompt is ${#prompt} characters, over SHUNT_OLLAMA_MAX_CHARS; skipping Ollama" >&2
+    return 1
+  fi
   command -v curl >/dev/null 2>&1 || return 1
   # A fixed 32k window makes the first token very slow on a laptop, so ask for about 3 characters per token plus room for the answer.
   ctx="${SHUNT_OLLAMA_CTX:-$(( (${#system} + ${#prompt}) / 3 + ${SHUNT_OLLAMA_PREDICT:-2048} + 512 ))}"

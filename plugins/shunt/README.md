@@ -34,6 +34,7 @@ claude plugin install shunt@flisk-marketplaces
 | `SHUNT_OLLAMA_CTX` | sized to the prompt | Context window requested from Ollama (4096 to 32768) |
 | `SHUNT_OLLAMA_PREDICT` | `2048` | Most tokens the worker may write |
 | `SHUNT_HAIKU_MODEL` | `haiku` | Model alias for the fallback |
+| `SHUNT_OLLAMA_MAX_CHARS` | `24000` | In `auto` mode, prompts bigger than this skip Ollama and go to Haiku |
 | `SHUNT_TIMEOUT` | `120` | Seconds to wait for Ollama before falling back to Haiku |
 
 ## Limits
