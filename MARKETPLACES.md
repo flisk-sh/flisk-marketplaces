@@ -55,3 +55,22 @@ Checked 2026-10-30, second round.
 | [awesome-docker](https://github.com/veggiemonk/awesome-docker) | Skipped: fails its "for Docker" test (Flisk would still exist without Docker) |
 | [mcp.so](https://mcp.so/submit) | Form only (its repo takes no PRs): needs a login. See #7 above |
 | [Claude connector directory](https://claude.ai/directory/manage) | Skipped: remote (https) servers only; `flisk mcp` is local stdio |
+
+## Launch boards and product directories
+
+Checked 2026-11-08 in Google Chrome, signed in by the maintainer. Free plans only; nothing was paid for.
+
+| Site | Status | Notes |
+| --- | --- | --- |
+| [Product Hunt](https://www.producthunt.com/posts/1289517) | **Launched** | Post exists (found by search). Citable has its own launch |
+| [Dev Hunt](https://devhunt.org/account/tools) | **6 tools listed, free plan**: Flisk CLI, DevEx Roadmap, Citable, README Score, Pages, Helpdock | Free listings wait in a queue (launch dates in 2031) and carry a nofollow link. The badge on the maker's site earns the "Maker links to DevHunt" mark: shown for Flisk CLI, Citable, README Score and Helpdock on 2026-11-08. Pages shows no badge yet (its deploy was failing on a stale `bun.lock`, fixed in flisk-sh/pages#168). DevEx Roadmap has no badge yet. Paid boost starts at $49 for a chosen week and a dofollow link: not bought |
+| [OpenAlternative](https://openalternative.co/submit) | **Skipped** | Its guidelines exclude CLIs, libraries, SDKs, frameworks and MCP servers, and want 50+ stars and a named proprietary rival. Flisk is a CLI |
+| [AlternativeTo](https://alternativeto.net/software/flisk/) | In the free review queue since 2026-10-31 | See `docs` for the Tilt, Skaffold and Garden submissions |
+| [SaaSHub](https://www.saashub.com/flisk) | Pending approval (2026-10-31) | |
+| [SourceForge](https://sourceforge.net), [Indie Hackers](https://www.indiehackers.com) | **Not done** | Searches found no Flisk page on either (2026-11-07). A PyPI package named `flisk` (not ours) exists, so check the SourceForge name first |
+
+Dev Hunt lessons:
+- Its URL import ("Paste your website") could not read our sites, so the form is filled by hand: a logo file (we use each site's `/icon-512.png`), one screenshot, name, slogan, URL, repo, description, a first comment.
+- Search on devhunt.org did not find "Flisk CLI". The dashboard at `/account/tools` is the reliable list.
+- The badge image comes from `https://devhunt.org/badge/<slug>.svg`. A site with a Content-Security-Policy needs `https://devhunt.org` in `img-src`, or the browser hides it (Citable, README Score and Pages needed this).
+- Each launch opens a "Launch plan" page that sells the $49 boost. The free listing is already saved; close it.
