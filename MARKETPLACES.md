@@ -9,11 +9,11 @@ Checked 2026-10-29. "Verified" means I called the marketplace or read the file; 
 | 3 | [PulseMCP](https://www.pulsemcp.com) | same server | Submissions **paused** as of 2026-10-07 (from search); it should still ingest the official registry | Re-check later; do not rely on it |
 | 4 | [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk) | same server, listed as "Flisk App Builder" | **Approved and listed** (verified, page loads) | Done 2026-10-30: `glama.json` in the flisk repo root, claimed, then a release made from a passing build test (admin Dockerfile page: build step `npm install -g @flisk-sh/flisk@latest`, CMD `flisk mcp`; answers the handshake with 21 tools). Score 58%. Re-check the TDQS page for the tool quality rating |
 | 5 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | one list line | **PR open**: [#18048](https://github.com/punkpeye/awesome-mcp-servers/pull/18048) | Wait for review |
-| 6 | [Smithery](https://smithery.ai) | same server | Not found by search (not verified, page is script-rendered) | Sign in, `smithery.ai/new`, point at the repo |
-| 7 | [mcp.so](https://mcp.so/submit) | same server | Not found by search (same caveat) | Submit the GitHub URL |
+| 6 | [Smithery](https://smithery.ai) | same server | **Skipped** (checked 2026-11-08): Smithery shut down accounts, API keys, CLI and proxy on 2026-10-31 and is now a curated public directory powered by Arcade; `smithery.ai/new` is gone | none |
+| 7 | [mcp.so](https://mcp.so/submit) | same server | **Paid only** (checked 2026-11-08): the submit form offers a $39 one-time "Paid submission" and no free option | Skip unless the maintainer decides to pay |
 | 8 | Claude Code plugin marketplace | `flisk-cli` plugin | **Exists** in `flisk-sh/flisk` (`.claude-plugin/marketplace.json`, verified) | Users run `/plugin marketplace add flisk-sh/flisk` |
 | 9 | [skills.sh](https://skills.sh) / agent skills | `flisk-sh/flisk-skills` | Repo exists (verified); installs straight from GitHub (from search) | Check `npx skills add flisk-sh/flisk-skills` works |
-| 10 | [Cursor Directory](https://cursor.directory) | MCP server entry | Unchecked | Submit with the copy below |
+| 10 | [Cursor Directory](https://cursor.directory) | MCP server entry | Needs sign-in (checked 2026-11-08): it now lists plugins ("Submit a plugin", GitHub or Google login), not MCP servers | Maintainer signs in, then submit the `flisk-cli` plugin |
 | 11 | [Docker Hub](https://hub.docker.com/u/flisk-sh) | namespace `flisk-sh`: prebuilt golden layers L1 to L3, L4 later, other images after that | **Planned** (checked 2026-10-31): `flisk-sh` is free; the organization is not created yet, because "Create organization" leads to a paid Docker Team checkout. `flisk` is taken by someone else | Maintainer creates the `flisk-sh` organization and picks the plan, then pushes L1 to L3. The flisk repo's `docs/troubleshoot-l1.md` still says the layers are never pushed: change it in the same release |
 
 I did not create accounts, sign in, or post to any of these for you. #4, #6, #7, #10 and #11 need a login, and #5 should wait for #4.
@@ -67,7 +67,10 @@ Checked 2026-11-08 in Google Chrome, signed in by the maintainer. Free plans onl
 | [OpenAlternative](https://openalternative.co/submit) | **Skipped** | Its guidelines exclude CLIs, libraries, SDKs, frameworks and MCP servers, and want 50+ stars and a named proprietary rival. Flisk is a CLI |
 | [AlternativeTo](https://alternativeto.net/software/flisk/) | In the free review queue since 2026-10-31 | See `docs` for the Tilt, Skaffold and Garden submissions |
 | [SaaSHub](https://www.saashub.com/flisk) | Pending approval (2026-10-31) | |
-| [SourceForge](https://sourceforge.net), [Indie Hackers](https://www.indiehackers.com) | **Not done** | Searches found no Flisk page on either (2026-11-07). A PyPI package named `flisk` (not ours) exists, so check the SourceForge name first |
+| [SourceForge](https://sourceforge.net) | **Not done**: needs a login | No Flisk page found (2026-11-07). A PyPI package named `flisk` (not ours) exists, so check the name first |
+| [Indie Hackers](https://www.indiehackers.com/product/flisk) | **Product page live** (2026-11-08), details saved | Posting is gated: new accounts must comment on other posts first, or subscribe to IH+. Launch story drafted, not posted |
+| [BetaList](https://betalist.com/agent) | **Skipped** | Every plan (Lite, Standard, Premium) is paid; no free plan found |
+| [mcp.so](https://mcp.so/submit) | **Skipped** | Paid only ($39), see #7 above |
 
 Dev Hunt lessons:
 - Its URL import ("Paste your website") could not read our sites, so the form is filled by hand: a logo file (we use each site's `/icon-512.png`), one screenshot, name, slogan, URL, repo, description, a first comment.
