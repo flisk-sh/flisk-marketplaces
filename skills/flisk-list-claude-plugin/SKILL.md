@@ -21,7 +21,7 @@ Checked 2026-11-08, when the directory refused the Flisk plugin (`flisk-sh/flisk
 - **No MCP server that runs on the user's computer.** `.mcp.json` may name only a public URL. `flisk mcp` is a stdio server, so the Flisk plugin ships skills only; users add the server with `claude mcp add flisk -- flisk mcp`.
 - **Only Markdown, text, JSON, YAML and PNG, JPEG, GIF, WebP or ICO files.** No script of any kind (the old `scripts/flisk-mcp.sh` launcher, and anything starting with `#!`), no `pnpm-workspace.yaml` or other package manager config, and every text file UTF-8 with no NUL bytes. A license, a readme, `.gitignore` and the icon can stay.
 
-The Citable and README plugins passed because they hold a public-URL server and Markdown or JSON only. Fix: flisk-sh/flisk#3373 (the generator `scripts/agent-plugin.mjs` writes the plugin; a test now fails on a script or an `.mcp.json`). After merging, press "Check for new commits" on the plugin's page; it rescans without asking for a review.
+The Citable and README plugins passed because they hold a public-URL server and Markdown or JSON only. Fix: flisk-sh/flisk#3373 (the generator `scripts/agent-plugin.mjs` writes the plugin; a test now fails on a script or an `.mcp.json`). After merging, press "Check for new commits" on the plugin's page; it rescans without asking for a review. On 2026-11-08 the page kept showing the old commit for about ten minutes, then moved to the new one (2e00973) and "waiting for a reviewer" with only warnings; reload the page before concluding it did not work.
 
 The directory tracks the default branch and rescans new commits, so merge fixes before submitting. Claude Code users install from a marketplace repo: `/plugin marketplace add flisk-sh/flisk`.
 
