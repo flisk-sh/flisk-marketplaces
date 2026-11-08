@@ -55,7 +55,7 @@ Rules read on each site's own page on 2026-11-09. Unless a row says so, nothing 
 | [Terminal Trove](https://terminaltrove.com/submit/) | **Submitted** 2026-11-08 by the maintainer (the page said "Thank you for your submission!"); waits for the curator | Web form used, so no email needed | Good: cross-platform CLI with binaries |
 | [Show HN](https://news.ycombinator.com/item?id=50187746) | **Already posted** 2026-10-21 by the maintainer: 5 points, 13 comments. An earlier plain submission ([49924046](https://news.ycombinator.com/item?id=49924046), 1 October, under the TDK name) got 1 point | A repeat needs a real change, Show HN does not count minor updates. A draft is in `docs/drafts/show-hn.md` in the flisk repo | Done once |
 | [Peerlist Launchpad](https://peerlist.io/launchpad) | No price shown; opens every Monday, 00:00 to 23:59 UTC | A Peerlist profile | Good: developers and designers |
-| [Launching Next](https://www.launchingnext.com/submit/) | Free, no date promised ($99 for a 1-day review) | Name, email, 2,500-character description, tags, planned marketing spend | Fair |
+| [Launching Next](https://www.launchingnext.com/submit/) | **Already submitted** before this list, per the maintainer (2026-11-09); no date promised | Nothing | Fair |
 | [Uneed](https://www.uneed.best/tool/flisk) | **Already listed** (logo uploaded 2026-10-26), page says "Launching Soon" | Free line, at least 50 days; a dofollow link needs 20 upvotes | Done, waiting for its date |
 | [Fazier](https://fazier.com/submit) | Free, within 30 days | A link to Fazier on the homepage or footer | Fair: needs a site change |
 | [Changelog News](https://changelog.com/news/submit) | No price shown; refuses commercial products | Sign-in, URL, title | Unsure: Flisk has a Premium tier |
