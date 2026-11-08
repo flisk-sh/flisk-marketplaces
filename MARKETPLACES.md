@@ -4,9 +4,9 @@ Re-checked 2026-11-08 (each row says when it was last checked). "Verified" means
 
 | # | Marketplace | What goes there | Status | Next step |
 | --- | --- | --- | --- | --- |
-| 1 | [Apify Store](https://apify.com/store) | 2 Actors: [`flisk/flisk-app-starter`](https://apify.com/flisk/flisk-app-starter), [`flisk/flisk-stack-scanner`](https://apify.com/flisk/flisk-stack-scanner) | **Published** 2026-10-29; both public pages answered 200 on 2026-11-08; icons and SEO fields set; `e2e/apify.sh` passed on 2026-10-29 | Store search for "flisk" not re-checked since 2026-10-29 (look in a browser) |
+| 1 | [Apify Store](https://apify.com/store) | 2 Actors: [`flisk/flisk-app-starter`](https://apify.com/flisk/flisk-app-starter), [`flisk/flisk-stack-scanner`](https://apify.com/flisk/flisk-stack-scanner) | **Published** 2026-10-29; both public pages answered 200 on 2026-11-08; icons and SEO fields set; `e2e/apify.sh` passed on 2026-10-29 | **Not found by search** (checked 2026-11-08): the store API reports 2 Actors for the owner `flisk`, but neither comes up when searching "flisk" or the exact name `flisk-app-starter`. Both have an empty `categories` list. Set a category in the Apify Console, then search again |
 | 2 | [Official MCP Registry](https://registry.modelcontextprotocol.io) | `flisk mcp` server | **Listed** as `io.github.flisk-sh/flisk`, 21 versions, latest 1.4.42 published 2026-11-08 (verified via the registry API; every release publishes a new version) | none |
-| 3 | [PulseMCP](https://www.pulsemcp.com) | same server | Submissions **paused** as of 2026-10-07 (from search). Not re-checked on 2026-11-08: the site refuses scripted requests, so look in a browser | Search "flisk" on pulsemcp.com in a browser; do not rely on it |
+| 3 | [PulseMCP](https://www.pulsemcp.com) | same server | Submissions **paused** as of 2026-10-07 (from search). Re-checked in a browser on 2026-11-08: the banner still says submissions and listing changes are paused, and searching "flisk" shows 0 servers | Wait for submissions to reopen |
 | 4 | [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk) | same server, listed as "Flisk App Builder" | **Approved and listed** (verified 2026-11-08, page loads) | Done 2026-10-30: `glama.json` in the flisk repo root, claimed, then a release made from a passing build test (admin Dockerfile page: build step `npm install -g @flisk-sh/flisk@latest`, CMD `flisk mcp`). On 2026-11-08 the page shows 23 tools and a Tool Definition Quality Score of 3.9 out of 5.0 (scored 2026-11-08 01:02). The old 58% score was not re-read |
 | 5 | [awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) | one list line | **PR open**: [#18048](https://github.com/punkpeye/awesome-mcp-servers/pull/18048), still open and unmerged on 2026-11-08, no review or maintainer reply since the 2026-10-30 Glama note | Wait for review |
 | 6 | [Smithery](https://smithery.ai) | same server | **Skipped** (checked 2026-11-08): Smithery shut down accounts, API keys, CLI and proxy on 2026-10-31 and is now a curated public directory powered by Arcade; `smithery.ai/new` is gone | none |
@@ -33,6 +33,16 @@ I did not create accounts or sign in for the rows above. #7 still needs payment,
 ```
 - [flisk-sh/flisk](https://github.com/flisk-sh/flisk) [![flisk-sh/flisk MCP server](https://glama.ai/mcp/servers/flisk-sh/flisk/badges/score.svg)](https://glama.ai/mcp/servers/flisk-sh/flisk) 📇 🏠 🍎 🪟 🐧 - Runs your whole app (website, API, workers, AI agents, database) on your computer with one command; the MCP server lets an agent create parts, start the app, read status and logs, and fix setup problems.
 ```
+
+## Directories that index GitHub by themselves
+
+Searched for "flisk" in a browser on 2026-11-08. There is nothing to submit to these.
+
+| Site | Result |
+| --- | --- |
+| [claude-plugins.dev](https://claude-plugins.dev/skills) | No Flisk result; the site says public skills on GitHub are indexed automatically |
+| [SkillsMP](https://skillsmp.com) | No Flisk result |
+| [skills.sh](https://skills.sh) | No page for `flisk-sh/flisk-skills` (404), see #9 |
 
 ## Other awesome lists
 
