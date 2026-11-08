@@ -124,7 +124,7 @@ Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued
 | [📦 **npm**](https://www.npmjs.com/package/@flisk-sh/flisk) | — | [✅ 0.3.0](https://www.npmjs.com/package/@flisk-sh/pages) | [✅ 0.1.0](https://www.npmjs.com/package/@flisk-sh/citable) | [⬜](https://github.com/flisk-sh/readme-score) | [✅](https://www.npmjs.com/package/@flisk-sh/flisk) |
 | [🤖 **OpenAI** (ChatGPT, Codex)](openai/) | [⏸](openai/) | [⏸](openai/) | [⏸](openai/) | [⏸](openai/) | — |
 | [🖱 **Cursor Directory**](https://cursor.directory/plugins/flisk) | — | — | — | — | [⏳ scan failed, re-run asked](https://github.com/cursor/community-plugins/issues/513) |
-| [🗂 **mcpservers.org**](https://mcpservers.org/submit) | — | — | — | — | [🟡](https://mcpservers.org/submit) |
+| [🗂 **mcpservers.org**](https://mcpservers.org/submit) | — | — | — | — | [⏳](https://mcpservers.org/submit) |
 | [⭐ **Awesome lists**](MARKETPLACES.md#other-awesome-lists) | — | — | — | — | [⏳ 3 PRs open](MARKETPLACES.md#other-awesome-lists) |
 | [🧠 **skills.sh**](https://skills.sh) | — | — | — | — | [⬜](https://github.com/flisk-sh/flisk-skills) |
 | [🐳 **Docker Hub, GHCR**](https://hub.docker.com/u/alexdykyi) | — | — | — | — | [✅ 8 images](https://hub.docker.com/u/alexdykyi) |
@@ -208,7 +208,6 @@ Every server is **read-only**: [it plans, checks or scores](FRAMEWORK.md). It cr
 | 🧩 | [Put My Page Online back in the Claude directory](claude-directory/README.md): connector and plugin are no longer in the submissions list | [User](https://claude.ai/directory/manage) |
 | 🔧 | [Helpdock prompts and a Claude listing](claude-directory/README.md) | [Maintainer](https://github.com/flisk-sh/helpdock) |
 | 🖱 | [Cursor Directory scan re-run](https://github.com/cursor/community-plugins/issues/513) | [Cursor admin](https://github.com/cursor/community-plugins/issues/513) |
-| 🗂 | [mcpservers.org final submit](https://mcpservers.org/submit): form filled on the free plan, needs the final button | [User](https://mcpservers.org/submit) |
 | 💬 | [Indie Hackers launch story](https://www.indiehackers.com/product/flisk): revenue is set to $0 a month, posting is still locked for new members | [Indie Hackers](https://www.indiehackers.com/product/flisk) |
 | 📦 | [npm for README Score](https://www.npmjs.com/package/@flisk-sh/readme-score) | [User (npm sign-in)](https://www.npmjs.com/) |
 | 🤖 | [OpenAI: ID check, domain tokens, terms, demo video](openai/) | [User, later](openai/) |
