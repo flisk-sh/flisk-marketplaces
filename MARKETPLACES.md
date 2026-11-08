@@ -67,8 +67,8 @@ Checked 2026-11-08 in Google Chrome, signed in by the maintainer. Free plans onl
 | [OpenAlternative](https://openalternative.co/submit) | **Skipped** | Its guidelines exclude CLIs, libraries, SDKs, frameworks and MCP servers, and want 50+ stars and a named proprietary rival. Flisk is a CLI |
 | [AlternativeTo](https://alternativeto.net/software/flisk/) | In the free review queue since 2026-10-31 | See `docs` for the Tilt, Skaffold and Garden submissions |
 | [SaaSHub](https://www.saashub.com/flisk) | Pending approval (2026-10-31) | |
-| [SourceForge](https://sourceforge.net) | **Not done**: needs a login | No Flisk page found (2026-11-07). A PyPI package named `flisk` (not ours) exists, so check the name first |
-| [Indie Hackers](https://www.indiehackers.com/product/flisk) | **Product page live** (2026-11-08), details saved | Posting is gated: new accounts must comment on other posts first, or subscribe to IH+. Launch story drafted, not posted |
+| [SourceForge](https://sourceforge.net/projects/flisk/) | **Listed** 2026-11-08 (free) | Imported `flisk-sh/flisk` through the GitHub importer under the `omakase` account; homepage flisk.sh, topic Build Tools, license MIT. The importer asks for GitHub OAuth (public data only) and its URL box did not fill the owner and repo fields by itself. OS categories and a logo are still to add
+| [Indie Hackers](https://www.indiehackers.com/product/flisk) | **Product page live** (2026-11-08), details saved | The page's checklist still lists "Add an original post" (gated: new accounts must comment first or buy IH+) and "Add revenue data" (we have none to report). Launch story drafted, not posted
 | [BetaList](https://betalist.com/agent) | **Skipped** | Every plan (Lite, Standard, Premium) is paid; no free plan found |
 | [mcp.so](https://mcp.so/submit) | **Skipped** | Paid only ($39), see #7 above |
 
