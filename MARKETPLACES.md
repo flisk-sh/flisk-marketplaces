@@ -51,7 +51,7 @@ Rules read on each site's own page on 2026-11-09. Unless a row says so, nothing 
 
 | Site | Free option | Needs | Fit |
 | --- | --- | --- | --- |
-| [MCP Market](https://mcpmarket.com/submit) | Free queue, 4 to 6 weeks ($29 skips it) | GitHub repo URL | Good: `flisk mcp` |
+| [MCP Market](https://mcpmarket.com/submit) | **Submitted** 2026-11-09 by the maintainer, free queue, 4 to 6 weeks; they email when it is live | Nothing | Good: `flisk mcp` |
 | [Terminal Trove](https://terminaltrove.com/submit/) | **Submitted** 2026-11-08 by the maintainer (the page said "Thank you for your submission!"); waits for the curator | Web form used, so no email needed | Good: cross-platform CLI with binaries |
 | [Show HN](https://news.ycombinator.com/item?id=50187746) | **Already posted** 2026-10-21 by the maintainer: 5 points, 13 comments. An earlier plain submission ([49924046](https://news.ycombinator.com/item?id=49924046), 1 October, under the TDK name) got 1 point | A repeat needs a real change, Show HN does not count minor updates. A draft is in `docs/drafts/show-hn.md` in the flisk repo | Done once |
 | [Peerlist Launchpad](https://peerlist.io/launchpad) | No price shown; opens every Monday, 00:00 to 23:59 UTC | A Peerlist profile | Good: developers and designers |

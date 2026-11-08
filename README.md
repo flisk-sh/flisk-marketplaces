@@ -128,6 +128,8 @@ Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued
 | [🖱 **Cursor Directory**](https://cursor.directory/plugins/flisk) | — | — | — | — | [⏳ scan failed, re-run asked](https://github.com/cursor/community-plugins/issues/513) |
 | [🗂 **mcpservers.org**](https://mcpservers.org/submit) | — | — | — | — | [⏳](https://mcpservers.org/submit) |
 | [🗂 **mcp.directory**](https://mcp.directory/submit) | — | — | — | — | [⏳](https://mcp.directory/submit) |
+| [🗂 **MCP Market**](https://mcpmarket.com/submit) | — | — | — | — | [⏳](https://mcpmarket.com/submit) |
+| [🗂 **Terminal Trove**](https://terminaltrove.com/) | — | — | — | — | [⏳](https://terminaltrove.com/) |
 | [⭐ **Awesome lists**](MARKETPLACES.md#other-awesome-lists) | — | — | — | — | [⏳ 3 PRs open](MARKETPLACES.md#other-awesome-lists) |
 | [🧠 **skills.sh**](https://skills.sh) | — | — | — | — | [⬜](https://github.com/flisk-sh/flisk-skills) |
 | [🐳 **Docker Hub, GHCR**](https://hub.docker.com/u/alexdykyi) | — | — | — | — | [✅ 8 images](https://hub.docker.com/u/alexdykyi) |
