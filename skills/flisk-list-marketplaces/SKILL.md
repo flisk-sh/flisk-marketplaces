@@ -11,7 +11,7 @@ The source of truth is the `flisk-sh/flisk-marketplaces` repo (locally `~/tdk-pr
 
 - Two Actors in `apify/actors/`: `flisk/flisk-app-starter` (pick what to build, get a working app) and `flisk/flisk-stack-scanner` (App Checker).
 - Needs `apify-cli` logged in (`apify login`). The user signs in; never enter credentials.
-- Publish: `apify push` from the Actor folder; set icon, SEO title and description, categories in the console; then make it public.
+- Publish: `apify push` from the Actor folder; set icon, SEO title and description in the console (categories are auto-assigned, there is nothing to set); then make it public.
 - Check after every publish: `e2e/apify.sh` runs the live Actors for real (every template must give a real project). Search results lag a day.
 
 ## Official MCP Registry
