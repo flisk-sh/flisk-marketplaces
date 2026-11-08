@@ -123,6 +123,7 @@ Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued
 | [⚙️ **GitHub Actions Marketplace**](https://github.com/marketplace?type=actions) | — | [✅](https://github.com/marketplace/actions/flisk-pages-check-and-publish) | [✅](https://github.com/marketplace/actions/citable-ai-search-score) | [✅](https://github.com/marketplace/actions/readme-score) | — |
 | [📦 **npm**](https://www.npmjs.com/package/@flisk-sh/flisk) | — | [✅ 0.3.0](https://www.npmjs.com/package/@flisk-sh/pages) | [✅ 0.1.0](https://www.npmjs.com/package/@flisk-sh/citable) | [⬜](https://github.com/flisk-sh/readme-score) | [✅](https://www.npmjs.com/package/@flisk-sh/flisk) |
 | [🤖 **OpenAI** (ChatGPT, Codex)](openai/) | [⏸](openai/) | [⏸](openai/) | [⏸](openai/) | [⏸](openai/) | — |
+| [🍺 **Homebrew**](https://github.com/flisk-sh/homebrew-tap) | — | — | — | — | [✅ tap](https://github.com/flisk-sh/homebrew-tap) |
 | [🖱 **Cursor Directory**](https://cursor.directory/plugins/flisk) | — | — | — | — | [⏳ scan failed, re-run asked](https://github.com/cursor/community-plugins/issues/513) |
 | [🗂 **mcpservers.org**](https://mcpservers.org/submit) | — | — | — | — | [⏳](https://mcpservers.org/submit) |
 | [⭐ **Awesome lists**](MARKETPLACES.md#other-awesome-lists) | — | — | — | — | [⏳ 3 PRs open](MARKETPLACES.md#other-awesome-lists) |
