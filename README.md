@@ -124,6 +124,7 @@ Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued
 | [📦 **npm**](https://www.npmjs.com/package/@flisk-sh/flisk) | — | [✅ 0.3.0](https://www.npmjs.com/package/@flisk-sh/pages) | [✅ 0.1.0](https://www.npmjs.com/package/@flisk-sh/citable) | [⬜](https://github.com/flisk-sh/readme-score) | [✅](https://www.npmjs.com/package/@flisk-sh/flisk) |
 | [🤖 **OpenAI** (ChatGPT, Codex)](openai/) | [⏸](openai/) | [⏸](openai/) | [⏸](openai/) | [⏸](openai/) | — |
 | [🍺 **Homebrew**](https://github.com/flisk-sh/homebrew-tap) | — | — | — | — | [✅ tap](https://github.com/flisk-sh/homebrew-tap) |
+| [🪣 **Scoop** (Windows)](https://github.com/flisk-sh/scoop-bucket) | — | — | — | — | [✅ bucket](https://github.com/flisk-sh/scoop-bucket) |
 | [🖱 **Cursor Directory**](https://cursor.directory/plugins/flisk) | — | — | — | — | [⏳ scan failed, re-run asked](https://github.com/cursor/community-plugins/issues/513) |
 | [🗂 **mcpservers.org**](https://mcpservers.org/submit) | — | — | — | — | [⏳](https://mcpservers.org/submit) |
 | [🗂 **mcp.directory**](https://mcp.directory/submit) | — | — | — | — | [⏳](https://mcp.directory/submit) |
