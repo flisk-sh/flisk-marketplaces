@@ -47,12 +47,12 @@ Searched for "flisk" in a browser on 2026-11-08. There is nothing to submit to t
 
 ## Free places not tried yet
 
-Rules read on each site's own page on 2026-11-09. Nothing here has been submitted.
+Rules read on each site's own page on 2026-11-09. Unless a row says so, nothing here has been submitted.
 
 | Site | Free option | Needs | Fit |
 | --- | --- | --- | --- |
 | [MCP Market](https://mcpmarket.com/submit) | Free queue, 4 to 6 weeks ($29 skips it) | GitHub repo URL | Good: `flisk mcp` |
-| [Terminal Trove](https://terminaltrove.com/submit/) | Form, no price shown | Name, URL, tagline, descriptions, an image preview (PNG, GIF or MP4) | Good: cross-platform CLI with binaries |
+| [Terminal Trove](https://terminaltrove.com/submit/) | **Submitted** 2026-11-08 by the maintainer (the page said "Thank you for your submission!"); waits for the curator | Web form used, so no email needed | Good: cross-platform CLI with binaries |
 | [Show HN](https://news.ycombinator.com/showhn.html) | Free | The maker posts from their own account and stays to answer | Good: `npx @flisk-sh/flisk demo` needs no signup |
 | [Peerlist Launchpad](https://peerlist.io/launchpad) | No price shown; opens every Monday, 00:00 to 23:59 UTC | A Peerlist profile | Good: developers and designers |
 | [Launching Next](https://www.launchingnext.com/submit/) | Free, no date promised ($99 for a 1-day review) | Name, email, 2,500-character description, tags, planned marketing spend | Fair |
