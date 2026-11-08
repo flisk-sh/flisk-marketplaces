@@ -208,8 +208,8 @@ Every server is **read-only**: [it plans, checks or scores](FRAMEWORK.md). It cr
 | 🧩 | [Put My Page Online back in the Claude directory](claude-directory/README.md): connector and plugin are no longer in the submissions list | [User](https://claude.ai/directory/manage) |
 | 🔧 | [Helpdock prompts and a Claude listing](claude-directory/README.md) | [Maintainer](https://github.com/flisk-sh/helpdock) |
 | 🖱 | [Cursor Directory scan re-run](https://github.com/cursor/community-plugins/issues/513) | [Cursor admin](https://github.com/cursor/community-plugins/issues/513) |
-| 🗂 | [mcpservers.org final submit](https://mcpservers.org/submit): form filled, needs a contact email and the button | [User](https://mcpservers.org/submit) |
-| 💬 | [Indie Hackers launch story and revenue](https://www.indiehackers.com/product/flisk): posting is locked for new members, revenue needs a real figure | [Indie Hackers, then user](https://www.indiehackers.com/product/flisk) |
+| 🗂 | [mcpservers.org final submit](https://mcpservers.org/submit): form filled on the free plan, needs the final button | [User](https://mcpservers.org/submit) |
+| 💬 | [Indie Hackers launch story](https://www.indiehackers.com/product/flisk): revenue is set to $0 a month, posting is still locked for new members | [Indie Hackers](https://www.indiehackers.com/product/flisk) |
 | 📦 | [npm for README Score](https://www.npmjs.com/package/@flisk-sh/readme-score) | [User (npm sign-in)](https://www.npmjs.com/) |
 | 🤖 | [OpenAI: ID check, domain tokens, terms, demo video](openai/) | [User, later](openai/) |
 
