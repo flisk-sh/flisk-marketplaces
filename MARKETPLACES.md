@@ -45,6 +45,24 @@ Searched for "flisk" in a browser on 2026-11-08. There is nothing to submit to t
 | [SkillsMP](https://skillsmp.com) | No Flisk result |
 | [skills.sh](https://skills.sh) | No page for `flisk-sh/flisk-skills` (404), see #9 |
 
+## Free places not tried yet
+
+Rules read on each site's own page on 2026-11-09. Nothing here has been submitted.
+
+| Site | Free option | Needs | Fit |
+| --- | --- | --- | --- |
+| [MCP Market](https://mcpmarket.com/submit) | Free queue, 4 to 6 weeks ($29 skips it) | GitHub repo URL | Good: `flisk mcp` |
+| [Terminal Trove](https://terminaltrove.com/submit/) | Form, no price shown | Name, URL, tagline, descriptions, an image preview (PNG, GIF or MP4) | Good: cross-platform CLI with binaries |
+| [Show HN](https://news.ycombinator.com/showhn.html) | Free | The maker posts from their own account and stays to answer | Good: `npx @flisk-sh/flisk demo` needs no signup |
+| [Peerlist Launchpad](https://peerlist.io/launchpad) | No price shown; opens every Monday, 00:00 to 23:59 UTC | A Peerlist profile | Good: developers and designers |
+| [Launching Next](https://www.launchingnext.com/submit/) | Free, no date promised ($99 for a 1-day review) | Name, email, 2,500-character description, tags, planned marketing spend | Fair |
+| [Uneed](https://www.uneed.best/pricing) | Free line, at least 50 days; dofollow needs 20 upvotes | An account | Fair |
+| [Fazier](https://fazier.com/submit) | Free, within 30 days | A link to Fazier on the homepage or footer | Fair: needs a site change |
+| [Changelog News](https://changelog.com/news/submit) | No price shown; refuses commercial products | Sign-in, URL, title | Unsure: Flisk has a Premium tier |
+| [OpenSourceAlternative.to](https://www.opensourcealternative.to/submit) | Waitlist of 6+ months ($29 for 48 hours) | Must be self-hosted and replace a named proprietary tool | Poor |
+
+Not readable: StackShare (429) and LibHunt (no submit page found). LobeHub's page does not say how servers are added.
+
 ## Other awesome lists
 
 Checked 2026-10-30 (rules read, not just titles).
