@@ -14,6 +14,15 @@ Portal: `claude.ai/directory/manage/new/plugin`. Five steps.
 5. After submitting, add the repo's push webhook (clipboard method for the secret; never print it).
 6. When its connector is approved: plugin page → Content tab → "Link existing listing" → the connector's slug.
 
+## Organization is not Verified (our case): what a plugin may hold
+
+Checked 2026-11-08, when the directory refused the Flisk plugin (`flisk-sh/flisk`, v1.0.0, 0eb9553) with "Directory policy refused this version". Verified means Anthropic knows the organization is a real company; flisk-sh is not. Two blocking findings, both only lifted for Verified organizations:
+
+- **No MCP server that runs on the user's computer.** `.mcp.json` may name only a public URL. `flisk mcp` is a stdio server, so the Flisk plugin ships skills only; users add the server with `claude mcp add flisk -- flisk mcp`.
+- **Only Markdown, text, JSON, YAML and PNG, JPEG, GIF, WebP or ICO files.** No script of any kind (the old `scripts/flisk-mcp.sh` launcher, and anything starting with `#!`), no `pnpm-workspace.yaml` or other package manager config, and every text file UTF-8 with no NUL bytes. A license, a readme, `.gitignore` and the icon can stay.
+
+The Citable and README plugins passed because they hold a public-URL server and Markdown or JSON only. Fix: flisk-sh/flisk#3373 (the generator `scripts/agent-plugin.mjs` writes the plugin; a test now fails on a script or an `.mcp.json`). After merging, press "Check for new commits" on the plugin's page; it rescans without asking for a review.
+
 The directory tracks the default branch and rescans new commits, so merge fixes before submitting. Claude Code users install from a marketplace repo: `/plugin marketplace add flisk-sh/flisk`.
 
 ## Prompts (required in every listing)
