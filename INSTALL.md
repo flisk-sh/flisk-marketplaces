@@ -4,7 +4,7 @@ All of these are remote, read-only, keyless (no account, no sign-in). Pick your 
 
 | Server | URL | What it does |
 | --- | --- | --- |
-| Build Me an App | `https://mcp.flisk.sh/mcp` | Say what app you want, get a plan and the commands to run it |
+| Build Me an App | `https://build.flisk.si/mcp` | Say what app you want, get a plan and the commands to run it |
 | Put My Page Online | `https://pages.flisk.si/mcp` | Check a web page, then put it online as a free link |
 | Get My Site Found by AI | `https://citable.flisk.si/mcp` | Check if AI search can find and quote your site |
 | Improve My README | `https://readme.flisk.si/mcp` | Score and improve a README |
@@ -17,7 +17,7 @@ Settings → Connectors → Add custom connector → paste the URL. Once a listi
 ## Claude Code
 
 ```bash
-claude mcp add --transport http flisk-app-builder https://mcp.flisk.sh/mcp
+claude mcp add --transport http flisk-app-builder https://build.flisk.si/mcp
 claude mcp add --transport http put-my-page-online https://pages.flisk.si/mcp
 claude mcp add --transport http ai-search-checker https://citable.flisk.si/mcp
 claude mcp add --transport http readme-checker https://readme.flisk.si/mcp
@@ -28,7 +28,7 @@ Plugins: `/plugin marketplace add flisk-sh/flisk`, then `/plugin install flisk-c
 ## Gemini CLI
 
 ```bash
-gemini mcp add --transport http flisk-app-builder https://mcp.flisk.sh/mcp
+gemini mcp add --transport http flisk-app-builder https://build.flisk.si/mcp
 ```
 
 Or edit `~/.gemini/settings.json`:
@@ -36,7 +36,7 @@ Or edit `~/.gemini/settings.json`:
 ```json
 {
   "mcpServers": {
-    "flisk-app-builder": { "httpUrl": "https://mcp.flisk.sh/mcp" },
+    "flisk-app-builder": { "httpUrl": "https://build.flisk.si/mcp" },
     "put-my-page-online": { "httpUrl": "https://pages.flisk.si/mcp" },
     "ai-search-checker": { "httpUrl": "https://citable.flisk.si/mcp" },
     "readme-checker": { "httpUrl": "https://readme.flisk.si/mcp" }
@@ -49,7 +49,7 @@ Or edit `~/.gemini/settings.json`:
 `~/.cursor/mcp.json` (or the project's `.cursor/mcp.json`):
 
 ```json
-{ "mcpServers": { "flisk-app-builder": { "url": "https://mcp.flisk.sh/mcp" } } }
+{ "mcpServers": { "flisk-app-builder": { "url": "https://build.flisk.si/mcp" } } }
 ```
 
 ## Codex CLI
@@ -58,7 +58,7 @@ Or edit `~/.gemini/settings.json`:
 
 ```toml
 [mcp_servers.flisk-app-builder]
-url = "https://mcp.flisk.sh/mcp"
+url = "https://build.flisk.si/mcp"
 ```
 
 ## ChatGPT
@@ -72,8 +72,10 @@ Each server also offers ready-made prompts (see the table in README.md). After a
 ## Check it works
 
 ```bash
-curl -s -X POST https://mcp.flisk.sh/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' \
+curl -s -X POST https://build.flisk.si/mcp -H 'content-type: application/json' -H 'accept: application/json, text/event-stream' \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/list","params":{}}'
 ```
 
 The exact flags and file names of Gemini, Cursor and Codex change between versions. They were written from memory, not run: check each against the client's own docs before relying on them.
+
+`https://mcp.flisk.sh/mcp` is the same Build Me an App server and still answers (the Claude directory listing uses it). `mcp.flisk.si` is Put My Page Online, not Build Me an App.
