@@ -18,8 +18,8 @@ Columns are the six questions. Rows are the six stages, from idea to proof. Ever
 | Stage | ❓ [**What**](FRAMEWORK.md#1-the-zachman-matrix) | 🛠 [**How**](FRAMEWORK.md#2-products-tools-prompts-and-servers) | 📍 [**Where**](https://flisk.sh) | 👥 [**Who**](https://claude.com/docs/directory/publish) | ⏱ [**When**](FRAMEWORK.md#3-where-each-product-is-listed) | 💡 [**Why**](https://flisk.sh) |
 | --- | --- | --- | --- | --- | --- | --- |
 | [**1 · Idea**](FRAMEWORK.md) | [7 products](#-our-apps) | [One command runs a whole app](https://flisk.sh) | [Your computer](https://github.com/flisk-sh/flisk) | [Developers + their AI](INSTALL.md) | [Launch 2026-10-31](https://www.producthunt.com/products/citable-3) | [A running app, no account](https://flisk.sh) |
-| [**2 · Promise**](MARKETPLACES.md) | [Free, read-only, keyless](https://mcp.flisk.sh/) | [Plan, check, score](https://pages.flisk.si) | [`*.flisk.si`, `*.flisk.sh`](https://citable.flisk.si) | [The company](https://flisk.sh) | [Per listing](#-distribution-board) | [Trust: nothing stored](https://mcp.flisk.sh/) |
-| [**3 · Shape**](INSTALL.md) | [Tools and prompts](#-our-apps) | [Streamable HTTP MCP](https://mcp.flisk.sh/mcp) | [`/mcp` on each host](https://mcp.flisk.sh/mcp) | [Claude, Codex, Gemini](INSTALL.md) | [Versioned](https://github.com/flisk-sh/flisk) | [Names people type](#-our-apps) |
+| [**2 · Promise**](MARKETPLACES.md) | [Free, read-only, keyless](https://build.flisk.si/) | [Plan, check, score](https://pages.flisk.si) | [`*.flisk.si`, `*.flisk.sh`](https://citable.flisk.si) | [The company](https://flisk.sh) | [Per listing](#-distribution-board) | [Trust: nothing stored](https://build.flisk.si/) |
+| [**3 · Shape**](INSTALL.md) | [Tools and prompts](#-our-apps) | [Streamable HTTP MCP](https://build.flisk.si/mcp) | [`/mcp` on each host](https://build.flisk.si/mcp) | [Claude, Codex, Gemini](INSTALL.md) | [Versioned](https://github.com/flisk-sh/flisk) | [Names people type](#-our-apps) |
 | [**4 · Ship**](https://github.com/flisk-sh/pages) | [5 servers, 5 plugins, CLI](https://www.npmjs.com/package/@flisk-sh/flisk) | [Cloudflare Workers, Render](https://github.com/flisk-sh/citable) | [Cloudflare, Render, GitHub](https://github.com/flisk-sh/readme-score) | [Maintainers](FRAMEWORK.md) | [Deploy on merge](https://github.com/flisk-sh/flisk) | [Small, safe services](https://flisk.sh) |
 | [**5 · Listed**](claude-directory/README.md) | [Directories and stores](#-distribution-board) | [Forms, scans, reviews](toolradar/README.md) | [Claude, Toolbox, Glama, PH](https://claude.ai/directory/manage) | [Reviewers](https://claude.com/docs/directory/publish) | [24 h to 10 business days](toolradar/README.md) | [Their trust rules](MARKETPLACES.md) |
 | [**6 · Proof**](skills/flisk-test-mcp/evidence/2026-10-31/summary.md) | [91 checks pass, 2 known](skills/flisk-test-mcp/evidence/2026-10-31/summary.md) | [`flisk-test-mcp`](skills/flisk-test-mcp) | [Evidence folder](skills/flisk-test-mcp/evidence/2026-10-31) | [Real users](INSTALL.md) | [Each run](skills/flisk-test-mcp/evidence/2026-10-31) | [Shows what to fix next](skills/flisk-test-mcp/SKILL.md) |
@@ -32,9 +32,9 @@ Columns are the six questions. Rows are the six stages, from idea to proof. Ever
 <tr>
 <td width="50%" valign="top">
 
-### [⚡ Build Me an App](https://mcp.flisk.sh/)
-[Say what you want.](https://mcp.flisk.sh/) Get the parts, and [the exact commands](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp) to run it.
-**MCP:** [`mcp.flisk.sh/mcp`](https://mcp.flisk.sh/mcp) · **Tools:** `plan_app`, `list_app_starters` · **Prompts:** `build_my_app`, `pick_a_starter`
+### [⚡ Build Me an App](https://build.flisk.si/)
+[Say what you want.](https://build.flisk.si/) Get the parts, and [the exact commands](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp) to run it.
+**MCP:** [`build.flisk.si/mcp`](https://build.flisk.si/mcp) · **Tools:** `plan_app`, `list_app_starters` · **Prompts:** `build_my_app`, `pick_a_starter`
 [Claude listing](https://claude.ai/directory/flisk-app-builder) · [Glama](https://glama.ai/mcp/servers/flisk-sh/flisk)
 
 </td>
@@ -111,7 +111,7 @@ Ask how to use Flisk in plain words: [`how do I start`, `docs for deploy`, or pa
 
 Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued](#-distribution-board) · 🟡 [draft](#-distribution-board) · ⛔ [closed or paid only](#-distribution-board) · ⏸ [parked](#-distribution-board) · ⬜ [not started](#-distribution-board) · — not for this app
 
-| Channel | [Build Me an App](https://mcp.flisk.sh/) | [Put My Page Online](https://pages.flisk.si) | [Get My Site Found by AI](https://citable.flisk.si) | [Improve My README](https://readme.flisk.si) | [Flisk CLI](https://flisk.sh) |
+| Channel | [Build Me an App](https://build.flisk.si/) | [Put My Page Online](https://pages.flisk.si) | [Get My Site Found by AI](https://citable.flisk.si) | [Improve My README](https://readme.flisk.si) | [Flisk CLI](https://flisk.sh) |
 | --- | :---: | :---: | :---: | :---: | :---: |
 | [🧰 **Toolbox** (Toolradar)](https://toolradar.com/company/submissions) | [⬜](https://toolradar.com/company/submissions) | [✅](https://toolradar.com/tools/pages) | [✅](https://toolradar.com/tools/citable-1) | [✅](https://toolradar.com/tools/readme-score) | [✅](https://toolradar.com/tools/flisk-cli) |
 | [🚀 **Product Hunt**](https://www.producthunt.com/products/citable-3) | [⬜](https://www.producthunt.com/) | [⬜](https://www.producthunt.com/) | [✅](https://www.producthunt.com/products/citable-3) | [⬜](https://www.producthunt.com/) | [✅](https://www.producthunt.com/posts/1289517) |
@@ -198,7 +198,7 @@ Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued
 | Your AI | Do this |
 | --- | --- |
 | [**Claude** (web, desktop, mobile)](https://claude.ai/directory/flisk-app-builder) | [Settings → Connectors → add the URL](INSTALL.md), or [find it in the directory](https://claude.ai/directory/flisk-app-builder) |
-| [**Claude Code**](INSTALL.md) | [`claude mcp add --transport http flisk-app-builder https://mcp.flisk.sh/mcp`](INSTALL.md) |
+| [**Claude Code**](INSTALL.md) | [`claude mcp add --transport http flisk-app-builder https://build.flisk.si/mcp`](INSTALL.md) |
 | [**Gemini CLI, Cursor, Codex**](INSTALL.md) | [Paste the snippet](INSTALL.md) |
 
 Every server is **read-only**: [it plans, checks or scores](FRAMEWORK.md). It creates nothing, sends nothing and stores nothing.

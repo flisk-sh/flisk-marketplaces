@@ -12,7 +12,7 @@ The Zachman matrix below uses the usual six questions as columns (What, How, Whe
 | **Designer** (system) | Manifests: `plugin.json`, `.mcp.json`, `action.yml`, `server.json` (registry), Actor input schemas | Tools with annotations (`readOnlyHint`), prompts, skills | `/mcp` on each host; icon at `/icon-512.png`; `.well-known` challenges where needed | Client users and the reviewer | Versioned releases; tags `v1` for Actions | Consistent names in words people type |
 | **Builder** (technology) | Cloudflare Workers (4 MCP servers), Render (Citable, README Score, Helpdock), npm `@flisk-sh/flisk`, Apify Actors (Bun/Node) | Streamable HTTP MCP (JSON-RPC 2.0), GitHub Actions composite, Apify push | Cloudflare DNS (proxied), Render custom domains, GitHub Pages (pages.flisk.si site) | Maintainers with the Cloudflare, Render, npm and Apify logins | Deploy on merge (Render) or `wrangler deploy` (Workers) | Ship small, read-only, keyless services |
 | **Out-of-context** (subcontractor) | Marketplace rules: Claude directory fields, Toolradar Auto-fill, Apify SEO fields, Glama `glama.json`, awesome-list formats | Forms, checks, scans, reviews (up to 10 business days) | Each marketplace's own site | Directory reviewers, Toolradar and Anthropic staff | Review queues (24 h to 10 business days) | Their trust and safety rules |
-| **Running** (product) | 91 protocol and plugin checks pass; 2 known failures (section 4) | Tools and prompts answer; icons served | Live: mcp.flisk.sh, pages.flisk.si/mcp, citable.flisk.si/mcp, readme.flisk.si/mcp | Users in Claude, Claude Code, Gemini CLI, Cursor, Codex | Evidence per run in `skills/flisk-test-mcp/evidence/` | Real use shows what to fix next |
+| **Running** (product) | 91 protocol and plugin checks pass; 2 known failures (section 4) | Tools and prompts answer; icons served | Live: build.flisk.si, pages.flisk.si/mcp, citable.flisk.si/mcp, readme.flisk.si/mcp | Users in Claude, Claude Code, Gemini CLI, Cursor, Codex | Evidence per run in `skills/flisk-test-mcp/evidence/` | Real use shows what to fix next |
 
 ## 2. Products, tools, prompts and servers
 
@@ -20,7 +20,7 @@ The Zachman matrix below uses the usual six questions as columns (What, How, Whe
 
 | Product | Server URL | Tools (what the AI calls) | Prompts (what the user picks) | Live check |
 | --- | --- | --- | --- | --- |
-| Build Me an App | `https://mcp.flisk.sh/mcp` | `plan_app`, `list_app_starters` | `build_my_app` (needs `what`), `pick_a_starter` | Pass |
+| Build Me an App | `https://build.flisk.si/mcp` | `plan_app`, `list_app_starters` | `build_my_app` (needs `what`), `pick_a_starter` | Pass |
 | Put My Page Online | `https://pages.flisk.si/mcp` | `check_page`, `how_to_put_page_online` | `put_my_page_online` | Pass |
 | Get My Site Found by AI (Citable) | `https://citable.flisk.si/mcp` | `check_site` | `check_my_site` (needs `url`) | Pass |
 | Improve My README (README Score) | `https://readme.flisk.si/mcp` | `score_readme` | `improve_my_readme` (needs `repo`) | Pass |
