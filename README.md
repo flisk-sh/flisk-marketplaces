@@ -5,7 +5,7 @@
 **Five apps a batch. One board. Every channel.**
 Free · no account · no API key · nothing stored
 
-[🔧 Install the servers](INSTALL.md) · [🧭 Full framework](FRAMEWORK.md) · [📜 Marketplace rules](MARKETPLACES.md) · [🧩 Skills](skills) · [🏭 App factory](https://github.com/flisk-sh/app-factory)
+[🔧 Install the servers](INSTALL.md) · [🧭 Full framework](FRAMEWORK.md) · [📜 Marketplace rules](MARKETPLACES.md) · [🧩 Skills](skills) · [🏭 App factory](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp)
 
 </div>
 
@@ -68,23 +68,25 @@ Columns are the six questions. Rows are the six stages, from idea to proof. Ever
 </table>
 
 <details>
-<summary><b>📚 [Flisk docs, Helpdock](https://helpdock.flisk.sh)</b> (a help center, not an app builder)</summary>
+<summary><b>📚 [Flisk docs, Helpdock](https://helpdock.flisk.si)</b> (a help center, not an app builder; paused until 2026-12-01, so it answers 503 for now)</summary>
 
-Ask how to use Flisk in plain words: [`how do I start`, `docs for deploy`, or paste an error](https://helpdock.flisk.sh).
-**MCP:** [`helpdock.flisk.sh/mcp`](https://helpdock.flisk.sh/mcp) · **Tools:** `search_docs`, `ask_help_center` · **Prompts:** none yet. Not in the Claude directory yet.
+Ask how to use Flisk in plain words: [`how do I start`, `docs for deploy`, or paste an error](https://helpdock.flisk.si).
+**MCP:** [`helpdock.flisk.si/mcp`](https://helpdock.flisk.si/mcp) · **Tools:** `search_docs`, `ask_help_center` · **Prompts:** none yet. Not in the Claude directory yet.
 
 </details>
 
 <details>
-<summary><b>🏭 [App factory: five more, one Worker](https://github.com/flisk-sh/app-factory)</b> (in build: these hosts have no DNS record yet, checked 2026-11-08)</summary>
+<summary><b>🏭 [App factory: five more, one Worker](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp)</b> (planned, not published: no DNS record for these five hosts, checked 2026-11-19)</summary>
 
-| Product | Host | Tool | What it does |
+These are ideas, not services. There is no clickable `/mcp` URL until a host resolves — paste one of these into a client and it will fail. The link above goes to the app-builder worker that is live today.
+
+| Product | Planned host | Tool | What it would do |
 | --- | --- | --- | --- |
-| [**Glossary**](https://glossary.flisk.si) | [glossary.flisk.si](https://glossary.flisk.si/mcp) | `define_term` | Tech words in plain English |
-| [**Roast**](https://roast.flisk.si) | [roast.flisk.si](https://roast.flisk.si/mcp) | `roast_idea` | Honest critique of an idea, with a fix |
-| [**Match**](https://match.flisk.si) | [match.flisk.si](https://match.flisk.si/mcp) | `match_my_story` | Finds where README and website disagree |
-| [**Tagline**](https://tagline.flisk.si) | [tagline.flisk.si](https://tagline.flisk.si/mcp) | `score_taglines` | Scores taglines, picks the best |
-| [**Links**](https://links.flisk.si) | [links.flisk.si](https://links.flisk.si/mcp) | `check_links` | Checks up to ten https links |
+| **Glossary** | `glossary.flisk.si` (not published) | `define_term` | Tech words in plain English |
+| **Roast** | `roast.flisk.si` (not published) | `roast_idea` | Honest critique of an idea, with a fix |
+| **Match** | `match.flisk.si` (not published) | `match_my_story` | Finds where README and website disagree |
+| **Tagline** | `tagline.flisk.si` (not published) | `score_taglines` | Scores taglines, picks the best |
+| **Links** | `links.flisk.si` (not published) | `check_links` | Checks up to ten https links |
 
 </details>
 
@@ -167,8 +169,8 @@ Checked 2026-11-08. ✅ [live](#-distribution-board) · ⏳ [in review or queued
 | 2 | [Put My Page Online](https://pages.flisk.si) | [5 · Listed](https://github.com/flisk-sh/pages) | [Start the Claude connector and plugin again](claude-directory/README.md): neither is in the submissions list | [User](https://claude.ai/directory/manage) |
 | 3 | [Get My Site Found by AI](https://citable.flisk.si) | [5 · Listed](https://www.producthunt.com/products/citable-3) | [Plugin waits for an Anthropic reviewer](claude-directory/README.md) | [Anthropic](https://claude.ai/directory/manage) |
 | 4 | [Improve My README](https://readme.flisk.si) | [5 · Listed](https://readme.flisk.si) | [Plugin waits for an Anthropic reviewer](claude-directory/README.md) · [npm](https://www.npmjs.com/package/@flisk-sh/readme-score) | [Anthropic, then user (npm)](https://claude.ai/directory/manage) |
-| 5 | [Helpdock](https://helpdock.flisk.sh) | [4 · Ship](https://github.com/flisk-sh/helpdock) | [Add prompts](https://helpdock.flisk.sh/mcp) · [submit to the Claude directory](claude-directory/README.md) | [Maintainer](https://github.com/flisk-sh/helpdock) |
-| 6–10 | [next batch](https://github.com/flisk-sh/app-factory) | [1 · Idea](https://github.com/flisk-sh/app-factory) | [Name, promise, four tools](https://github.com/flisk-sh/app-factory) | [Factory planner](https://github.com/flisk-sh/app-factory) |
+| 5 | [Helpdock](https://helpdock.flisk.si) | [4 · Ship](https://github.com/flisk-sh/helpdock) | [Add prompts](https://helpdock.flisk.si/mcp) · [submit to the Claude directory](claude-directory/README.md) | [Maintainer](https://github.com/flisk-sh/helpdock) |
+| 6–10 | [next batch](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp) | [1 · Idea](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp) | [Name, promise, four tools](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp) | [Factory planner](https://github.com/flisk-sh/flisk/tree/main/workers/app-builder-mcp) |
 
 ### ✅ [The per-app checklist](#-the-per-app-checklist)
 
