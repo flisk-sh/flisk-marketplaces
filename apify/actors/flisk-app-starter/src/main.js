@@ -18,20 +18,24 @@ try {
     let download = null;
     if (t.repo) {
         const work = mkdtempSync(join(tmpdir(), 'flisk-starter-'));
-        const dir = join(work, projectName);
-        execFileSync('git', ['clone', '--depth', '1', '--', t.repo, dir], {
-            stdio: 'inherit',
-            env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
-        });
-        rmSync(join(dir, '.git'), { recursive: true, force: true });
+        try {
+            const dir = join(work, projectName);
+            execFileSync('git', ['clone', '--depth', '1', '--', t.repo, dir], {
+                stdio: 'inherit',
+                env: { ...process.env, GIT_TERMINAL_PROMPT: '0' },
+            });
+            rmSync(join(dir, '.git'), { recursive: true, force: true });
 
-        const zipPath = join(work, `${projectName}.zip`);
-        execFileSync('zip', ['-qr', zipPath, projectName], { cwd: work, stdio: 'inherit' });
+            const zipPath = join(work, `${projectName}.zip`);
+            execFileSync('zip', ['-qr', zipPath, projectName], { cwd: work, stdio: 'inherit' });
 
-        const key = `${projectName}.zip`;
-        const store = await Actor.openKeyValueStore();
-        await store.setValue(key, await readFile(zipPath), { contentType: 'application/zip' });
-        download = store.getPublicUrl(key);
+            const key = `${projectName}.zip`;
+            const store = await Actor.openKeyValueStore();
+            await store.setValue(key, await readFile(zipPath), { contentType: 'application/zip' });
+            download = store.getPublicUrl(key);
+        } finally {
+            rmSync(work, { recursive: true, force: true });
+        }
     }
 
     await Actor.pushData({
